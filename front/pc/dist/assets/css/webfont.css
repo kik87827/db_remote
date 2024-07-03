@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Malgun Gothic Webfont';
+  src: url('./webfont/malgunsl.woff') format('woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Malgun Gothic Webfont';
+  src: url('./webfont/malgun.woff') format('woff');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Malgun Gothic Webfont';
+  src: url('./webfont/malgunbd.woff') format('woff');
+  font-weight: 700;
+}

@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* layout */
+.front_body{}
+.page_wrap{}
+.header_wrap{}
+.toplogo{}
+.toplogo_link{}
+.toplogo_link > img{}
+.header_field_group{}
+.search_field_container{}
+input.input_search{}
+.btn_search_submit{}
+.middle_wrap{}
+.footer_wrap{}
+.footer_copy{}
+
+
+.mv_gate_group{}
+.mv_gate_group .title_cols{}
+.mv_gate_group .contents_cols{}
+.mv_gate_copy_wrap{}
+.mv_gate_title{}
+.mv_gate_title > img{}
+.mv_gate_copy{}
+.mv_gate_img_wrap{}
+.mv_gate_img_wrap > img{}
+.mv_gate_menu_list{}
+.mv_gate_menu_list > li{}
+.mv_gate_menu{}
+.mv_gate_text_row{}
+.mv_gate_text_row:after{}
+.mv_gate_text{}
+.mv_gate_icon_row{}
+.mv_gate_icon_row .icon{}
+.mv_gate_menu.type2 .mv_gate_icon_row .icon{}
+.mv_gate_menu.type3 .mv_gate_icon_row .icon{}
+
+.mc_contents_group{}
+.mc_title_row{}
+.mc_title{}
+.mc_title_else_wrap{}
+.btn_box{}
+.btn_box:after{}
+.btn_box_text{}
+.mc_contents_row{}
+.list_tb_wrap{}
+.list_tb{}
+.list_tb thead th{}
+.list_tb thead th:last-of-type{}
+.list_tb tbody td{}
+.list_tb tbody td.align2{}
+.list_tb tbody td:last-of-type{}
+.list_thtext{}
+.list_thtext{}
+.list_current{}
+.list_current.type2{}
