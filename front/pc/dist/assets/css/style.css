@@ -49,9 +49,55 @@ input.input_search{}
 .list_tb thead th{}
 .list_tb thead th:last-of-type{}
 .list_tb tbody td{}
+.list_tb tbody td.type2{}
 .list_tb tbody td.align2{}
 .list_tb tbody td:last-of-type{}
 .list_thtext{}
 .list_thtext{}
 .list_current{}
 .list_current.type2{}
+
+
+.list_tb_wrap.skin2{}
+.list_tb_wrap.skin2 .list_tb{}
+.list_tb_wrap.skin2 .list_tb th{}
+
+.data_search_container{}
+.data_sort_row{}
+.btn_sort_box_list{}
+.btn_sort_box_list > li{}
+.btn_sort_box_list > li:last-of-type{}
+.btn_sort_box{}
+.btn_sort_box:after{}
+.btn_sort_box_text{}
+.btn_sort_box.active{}
+.btn_sort_box.active:after{}
+.btn_sort_box.active .btn_sort_box_text{}
+
+.data_search_box{}
+.data_search_field{}
+.data_search_row{}
+.data_search_row:last-of-type{}
+.data_search_item{}
+.data_search_label_cols{}
+.data_search_label{}
+.data_search_form_cols{}
+.inline_flex_item{}
+.inline_flex_cols{}
+.inline_flex_cols.liquid{}
+
+select.form_select{}
+input.form_input{}
+
+.data_search_textdom{}
+
+.search_inform_grid{}
+.search_infrom_cols{}
+.search_infrom_cols .inline_flex_item{}
+input.form_input.calendar{}
+.inline_flex_else{}
+
+.search_sm_container{}
+input.input_search_sm{}
+.btn_search_sm{}
+.btn_control_box{}
