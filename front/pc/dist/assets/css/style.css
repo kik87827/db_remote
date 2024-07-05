@@ -15,7 +15,7 @@ input.input_search{}
 .footer_wrap{}
 .footer_copy{}
 
-
+/* contents */
 .mv_gate_group{}
 .mv_gate_group .title_cols{}
 .mv_gate_group .contents_cols{}
@@ -40,9 +40,7 @@ input.input_search{}
 .mc_title_row{}
 .mc_title{}
 .mc_title_else_wrap{}
-.btn_box{}
-.btn_box:after{}
-.btn_box_text{}
+
 .mc_contents_row{}
 .list_tb_wrap{}
 .list_tb{}
@@ -101,3 +99,63 @@ input.form_input.calendar{}
 input.input_search_sm{}
 .btn_search_sm{}
 .btn_control_box{}
+
+
+.middle_title_row{}
+.middle_title{}
+.middle_title_emp{}
+.middle_title_emp{}
+.section_brick_wrap{}
+.section_brick{}
+.section_brick:last-of-type{}
+.section_top_row{}
+.section_top_row .left_cols,
+.section_top_row .right_cols{}
+.section_top_row .left_cols{}
+.section_top_row .right_cols{}
+
+.section_contents_row{}
+
+.btn_bottom_section{}
+.btn_bottom_section .btn_box{}
+
+
+/* component */
+input.props_form{}
+input.props_form:checked{}
+
+.btn_box{}
+.btn_box:after{}
+.btn_box_text{}
+.btn_box.link{}
+.btn_box.link:after{}
+
+
+.btn_box.skin2{}
+.btn_box.skin2:after{}
+.btn_box.skin2 .btn_box_text{}
+
+
+.btn_sbox{}
+.btn_sbox:before{}
+.sbox_text{}
+
+.btn_sbox.skin2{}
+.btn_sbox.skin2:before{}
+.btn_sbox.skin2 .sbox_text{}
+
+.btn_sbox.link{}
+.btn_sbox.link:before{}
+.btn_sbox.link .sbox_text{}
+
+.btn_sbox.refresh{}
+.btn_sbox.refresh:before{}
+.btn_sbox.refresh .sbox_text{}
+
+.btn_sbox.chart{}
+.btn_sbox.chart:before{}
+.btn_sbox.chart .sbox_text{}
+
+.btn_sbox.plan{}
+.btn_sbox.plan:before{}
+.btn_sbox.plan .sbox_text{}
