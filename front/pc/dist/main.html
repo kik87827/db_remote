@@ -6,9 +6,8 @@
 	<meta name="format-detection" content="telephone=no" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=1100" />
-	<link rel="stylesheet" href="./css/reset.css" />
-	<link rel="stylesheet" href="./css/layout.css" />
-	<link rel="stylesheet" href="./css/contents.css" />
+	<link rel="stylesheet" href="./assets/css/reset.css" />
+	<link rel="stylesheet" href="./assets/css/style.css" />
 	<script src="./assets/js/jquery-3.4.1.min.js"></script>
 	<script src="./assets/js/jquery-ui.js"></script>
 	<script src="./assets/js/swiper.min.js"></script>
@@ -19,16 +18,18 @@
 <body class="front_body">
 	<div class="page_wrap">
 		<header class="header_wrap">
-			<h1 class="toplogo"><a href="#" class="toplogo_link"><img src="./assets/images/toplogo.png" alt="DB손해보험"></a></h1>
-			<fieldset class="header_field_group">
-				<legend>검색</legend>
-				<form>
-					<div class="search_field_container">
-						<input type="text" class="input_search">
-						<button class="btn_search_submit"><span class="hdtext">검색</span></button>
-					</div>
-				</form>
-			</fieldset>
+			<div class="hgroup_inner">
+				<h1 class="toplogo"><a href="#" class="toplogo_link"><img src="./assets/images/toplogo.png" class="toplogo_main" alt="DB손해보험"></a></h1>
+				<fieldset class="header_field_group">
+					<legend>검색</legend>
+					<form>
+						<div class="search_field_container">
+							<input type="text" class="input_search">
+							<button class="btn_search_submit"><span class="hdtext">검색</span></button>
+						</div>
+					</form>
+				</fieldset>
+			</div>
 		</header>
 		<main class="middle_wrap">
 			<div class="mv_gate_group">
@@ -80,11 +81,11 @@
 				<div class="mc_title_row">
 					<h3 class="mc_title">최근 컨설팅목록</h3>
 					<div class="mc_title_else_wrap">
-						<a href="#" class="btn_box"><span class="btn_box_text">세부이력 조회</span></a>
+						<a href="#" class="btn_box link"><span class="btn_box_text">세부이력 조회</span></a>
 					</div>
 				</div>
 				<div class="mc_contents_row">
-					<div class="list_tb_wrap">
+					<div class="list_tb_wrap skin2">
 						<table class="list_tb">
 							<caption>최근 컨설팅목록</caption>
 							<colgroup>
