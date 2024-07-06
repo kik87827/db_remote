@@ -159,3 +159,114 @@ input.props_form:checked{}
 .btn_sbox.plan{}
 .btn_sbox.plan:before{}
 .btn_sbox.plan .sbox_text{}
+
+
+/* viewer */
+.user_header_wrap{}
+.user_header_inner{}
+.user_header_inner .left_cols{}
+.user_header_inner .right_cols{}
+.timer_render{}
+.ico_timer{}
+.timer_digital_element{}
+.user_control_wrap{}
+.user_control_list{}
+.user_control_list > li{}
+.user_control_list > li:last-of-type{}
+.user_control_box{}
+.user_control_box .ico{}
+.user_control_box .ico.call{}
+.user_control_box .ico.send{}
+.user_control_box .ico.setting{}
+.user_control_text{}
+
+.user_util_list{}
+.user_util_list > li{}
+.user_util_list > li:last-of-type{}
+.user_who_text{}
+.btn_util_quad{}
+
+.user_main_wrap{}
+.user_main_wrap .left_panel{}
+.user_main_wrap .main_panel{}
+.user_main_wrap .right_panel{}
+
+.process_wrap{}
+.process_list{}
+.process_list:before{}
+.process_list > li{}
+.process_list > li:first-of-type:before{}
+.process_list > li:last-of-type:before{}
+.process_list > li.active{}
+.process_list > li.active:before{}
+.process_list > li.active .process_item{}
+.process_list > li.active .process_item_bullet{}
+.process_list > li.active .process_item_text{}
+
+.process_item{}
+.process_item_bullet{}
+.process_item_text{}
+
+
+.user_photo_wrap{}
+.user_photo_list > li{}
+.user_photo_list > li:last-of-type{}
+.user_photo_item{}
+.user_photo_item > img{}
+
+.main_zoom_layer{}
+.zoom_control_item{}
+.btn_zoom_control{}
+.btn_zoom_control.plus{}
+.btn_zoom_control.minus{}
+.zoom_control_current{}
+
+.main_viewer_wrap{}
+.btn_viewer{}
+.btn_viewer.prev{}
+.btn_viewer.next{}
+.main_viewer_container{}
+.main_viewer_container > img{}
+
+.viewer_summary_wrap{}
+.viewer_summary_title{}
+.viewer_summary_scroll{}
+.viewer_summary_list{}
+.viewer_summary_list > li{}
+.viewer_summary_list > li:last-of-type{}
+.viewer_summary_item{}
+.viewer_summary_item.active{}
+
+
+.viewer_thumnail_wrap{}
+.viewer_thumnail_wrap .img_row{}
+.viewer_thumnail_wrap .img_row > img{}
+.viewer_thumnail_wrap .indigator_row{}
+.btn_thum_control{}
+.btn_thum_control.prev{}
+.btn_thum_control.next{}
+.indigator_fraction{}
+.indi_current{}
+.indi_part{}
+.indi_length{}
+
+.viewer_edit_wrap{}
+.viewer_edit_list{}
+.viewer_edit_list > li{}
+.viewer_edit_list > li:last-of-type{}
+.btn_viewer_box{}
+.btn_viewer_box .ico{}
+.btn_viewer_box .ico.one{}
+.btn_viewer_box .ico.width{}
+.btn_viewer_box .ico.move{}
+.btn_viewer_box .ico.underline{}
+.btn_viewer_box .ico.pen{}
+.btn_viewer_box .ico.text{}
+.btn_viewer_box .ico.stamp{}
+.btn_viewer_box .ico.eraser{}
+.btn_viewer_box .ico.color{}
+.viewer_box_text{}
+
+.btn_viewer_box.active{}
+.btn_viewer_box.active .viewer_box_text{}
+.btn_viewer_box.active .ico{}
