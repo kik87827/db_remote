@@ -2,21 +2,32 @@
 
 /* layout */
 .front_body{ min-height:100vh;}
-.bg_page{background:#F7FCF6; position:fixed;top:0;left:0;width:100%;height:100%;}
+.main_body{background:#F7FCF6;}
+/* .bg_page{background:#F7FCF6; position:fixed;top:6px;left:0;width:100%;height:calc(100% - 6px);} */
 .page_wrap{position:relative;z-index:5;}
 .header_wrap{position:relative;padding:36px 0 0 0;}
 .header_wrap:before{display:block;content:'';width:100%;height: 6px;background: linear-gradient(90deg, #A6CE39 0%, #2EB45D 100%); position:absolute;top:0;left:0;}
 .hgroup_inner{width:1000px; margin:0 auto; display:flex; justify-content: space-between; gap:20px; align-items: center;}
-.toplogo{}
-.toplogo_link{display:inline-block;width:130px;}
-.toplogo_link > img{max-width:100%;vertical-align: middle;}
+.toplogo{display:inline-block;}
+.toplogo_link{display:inline-block;display:inline-flex; align-items: center; gap:6px;}
+img.toplogo_main{max-width:130px;vertical-align: middle;}
+img.toplogo_sub{max-width:70.5px;vertical-align: middle;}
 .header_field_group{width:253px;}
 .search_field_container{height:50px; border-radius:100px; background:#E3EEE1;display:flex; align-items: center;width:100%;}
 input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px; color:#000; font-weight:bold; padding:0 0 0 25px;}
 .btn_search_submit{width:24px;height:24px;background:url("../images/btn_search_submit.png") no-repeat 50% 50%/100% auto;margin:0 13px;}
 .middle_wrap{}
+.middle_wrap.pixed{width:1000px; margin:0 auto 110px;}
 .footer_wrap{text-align: center;padding:120px 30px 50px}
 .footer_copy{font-size:16px; color:#AAAAAA; text-align: center;}
+.hgroup_nav_wrap{width:1000px; margin:32px auto 0; background:#F4F5F5; border-radius:8px;}
+.hgroup_nav_list{display:flex;  height:48px;}
+.hgroup_nav_list > li{flex:1; text-align: center; display:flex; align-items: center; justify-content: center;}
+.hgroup_home{display:block; background:url("../images/map_home_navi.png") no-repeat 50% 50%/20px auto; width:100%; height:100%;}
+.hgroup_nav_item{display:flex;align-items: center; justify-content: center;height:100%;width:100%; box-sizing: border-box; border:2px solid #F4F5F5; border-radius:8px;}
+.hgroup_nav_item.active{background:#fff;border-color:#00854A;box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);}
+.hgroup_nav_item.active .hgroup_nav_text{color:#000; font-weight:bold;}
+.hgroup_nav_text{font-size:14px; color:#838989; letter-spacing: -1px;}
 
 /* contents */
 .mv_gate_group{width:1000px; margin:0 auto;padding:130px 0 0 0;display:flex;gap:20px;}
@@ -66,13 +77,14 @@ input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px
 .mc_contents_row{}
 .list_tb_wrap{border-top:2px solid #666666;}
 .list_tb{width:100%;}
-.list_tb thead th{border-bottom:1px solid #BBBBBB; padding:12px 10px;}
+.list_tb thead th{border-bottom:1px solid #BBBBBB; padding:12px 10px; background:#F7F9F9;}
 .list_tb thead th:last-of-type{}
 .list_tb tbody td{border-bottom:1px solid #DDDDDD;padding:15px 10px;}
 .list_tb tbody td.type2{padding-top:0;padding-bottom:0;}
 .list_tb tbody td.align2{text-align: left;padding-left:50px;padding-right:50px;}
 .list_tb tbody td:last-of-type{}
 .list_tb tbody tr:hover td{background:#F7FCF6;}
+.list_tb tbody td .props_form{vertical-align: middle;}
 .list_thtext{font-size:16px; letter-spacing: -1px; color:#1A1A1A; font-weight:bold;}
 .list_tdtext{font-size:16px; letter-spacing: -1px; color:#000;}
 .list_current{font-size:16px; letter-spacing: -1px; color:#000;}
@@ -81,47 +93,62 @@ input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px
 
 .list_tb_wrap.skin2{}
 .list_tb_wrap.skin2 .list_tb{}
-.list_tb_wrap.skin2 .list_tb th{}
+.list_tb_wrap.skin2 .list_tb th{background:none;}
 
-.data_search_container{}
+.data_search_container{margin:25px auto 20px;}
 .data_sort_row{}
-.btn_sort_box_list{}
+.btn_sort_box_list{display:flex; flex-wrap:wrap; gap:6px;}
 .btn_sort_box_list > li{}
 .btn_sort_box_list > li:last-of-type{}
-.btn_sort_box{}
-.btn_sort_box:after{}
-.btn_sort_box_text{}
-.btn_sort_box.active{}
-.btn_sort_box.active:after{}
-.btn_sort_box.active .btn_sort_box_text{}
+.btn_sort_box{display:inline-flex; border:1px solid #AAAAAA; border-radius:100px; gap:5px; min-height:34px; align-items: center;padding:5px 14px 6px; box-sizing: border-box;}
+.btn_sort_box:before{display:block;content:'';width:9px;height:9px; background:url("../images/ico_chk.png") no-repeat 0 0/100% auto;}
+.btn_sort_box_text{font-size:13px; color:#AAAAAA; display:inline-block; letter-spacing: -1px;}
+.btn_sort_box.active{border:2px solid #00854A; background:#F1F8F3;}
+.btn_sort_box.active:before{background-position: 0 100%;}
+.btn_sort_box.active .btn_sort_box_text{color:#00854A;}
 
-.data_search_box{}
-.data_search_field{}
-.data_search_row{}
-.data_search_row:last-of-type{}
-.data_search_item{}
-.data_search_label_cols{}
-.data_search_label{}
-.data_search_form_cols{}
-.inline_flex_item{}
+.data_search_box{border:1px solid #aaa;border-radius:15px;padding:33px 20px; margin-top:15px; box-shadow:0px 4px 4px rgba(0, 0, 0, 0.1);}
+.data_search_field{width:100%; table-layout: fixed;}
+.data_search_field tr{}
+.data_search_field tr:last-of-type{}
+.data_search_field th{width:110px;text-align: left;}
+.data_search_field th,
+.data_search_field td{padding-bottom:16px;}
+.data_search_field tr:last-of-type th,
+.data_search_field tr:last-of-type td{padding-bottom:0;}
+.data_search_field td{padding-right:50px;}
+.data_search_field td:last-of-type{padding-right:0;}
+.data_search_row{display:flex;margin-bottom:16px;gap:0 50px;}
+.data_search_row:last-of-type{margin-bottom:0;}
+.data_search_item{flex:1;display:flex;gap:15px;}
+.data_search_label_cols{flex:0 0 110px;}
+.data_search_label{font-size:14px; font-weight:bold; color:#535353; letter-spacing: -1px; display:flex; min-height:34px;align-items: center;}
+.data_search_form_cols{flex: 1;}
+.inline_flex_item{display:flex;align-items: center;gap:4px;}
 .inline_flex_cols{}
-.inline_flex_cols.liquid{}
+.inline_flex_cols.liquid{flex:1;}
 
-select.form_select{}
-input.form_input{}
+select.form_select{color:#1A1A1A;cursor:pointer;font-size:14px; border:1px solid #aaa;height: 34px;padding: 0 30px 0 10px;border-radius:4px;box-sizing:border-box;
+    background: #fff url("../images/ico_select.png") no-repeat calc(100% - 14px) 50%/7.5px 6px;line-height:32px;-webkit-appearance:none;-moz-appearance:none;appearance:none;
+}
+select.form_select::-ms-value {background: none; color:#333;}
+select.form_select::-ms-expand {display: none;}
+select.form_select.min_wid{min-width:98px;}
+input.form_input{height:34px; line-height:1; width:100%; border-radius: 4px; background:#fff; border:1px solid #AAAAAA; box-sizing: border-box; padding:0 10px; font-size:14px;}
+input.form_input:disabled{background:#eee;}
+input.form_input.calendar{background:#fff url("../images/ico_calendar.png") no-repeat calc(100% - 8px) 50%/20px auto;padding-right:35px;}
 
-.data_search_textdom{}
+.data_search_textdom{display:flex; min-height:34px;align-items: center; font-size:14px;}
 
-.search_inform_grid{}
+.search_inform_grid{display:flex;gap:50px; justify-content: space-between;}
 .search_infrom_cols{}
 .search_infrom_cols .inline_flex_item{}
-input.form_input.calendar{}
 .inline_flex_else{}
 
-.search_sm_container{}
-input.input_search_sm{}
-.btn_search_sm{}
-.btn_control_box{}
+.search_sm_container{border:1px solid #AAAAAA; border-radius:4px; height:34px; display:flex; align-items: center; padding:0 10px; box-sizing: border-box;max-width:110px;}
+input.input_search_sm{flex:1;line-height:1;box-sizing: border-box; padding:0 10px 0 0; font-size:14px; width:100%; height:32px;}
+.btn_search_sm{width:16px;height:16px; display:inline-block; background:url("../images/ico_input_search.png") no-repeat 50% 50%/100% auto; flex:0 0 16px;}
+.btn_control_box{border-radius:4px; background:#4D5057;color:#fff; font-size:14px; display:inline-flex; align-items: center; justify-content: center; min-height:34px; padding:0 13px;}
 
 
 .middle_title_row{}
@@ -146,6 +173,11 @@ input.input_search_sm{}
 /* component */
 input.props_form{}
 input.props_form:checked{}
+
+input.props_form{width:20px;height:20px;flex:0 0 20px;appearance: none;border-radius:4px;cursor: pointer;background:#fff url("../images/ico_checkbox.png") no-repeat 0 0/100% auto;border:1px solid #aaa;}
+input.props_form:checked{
+    background-position:0 100%; background-color:#00854A; border-color:#00854A;
+}
 
 .btn_box{display:inline-flex;padding:10px 15px; min-height:44px; align-items: center; background:#4D5057; border-radius:8px; box-sizing: border-box;}
 .btn_box:after{}

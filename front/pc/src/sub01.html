@@ -45,7 +45,7 @@
 					</ul>
 				</nav>
 			</header>
-			<main class="middle_wrap">
+			<main class="middle_wrap pixed">
 				<div class="data_search_container">
 					<div class="data_sort_row">
 						<ul class="btn_sort_box_list">
@@ -56,73 +56,73 @@
 					</div>
 					<div class="data_search_box">
 						<form>
-							<div class="data_search_field">
-								<div class="data_search_row">
-									<div class="data_search_item">
-										<div class="data_search_label_cols"><span class="data_search_label">조회구분</span></div>
-										<div class="data_search_form_cols">
-											<div class="inline_flex_item">
-												<div class="inline_flex_cols"><select class="form_select"><option>전체</option></select></div>
-												<div class="inline_flex_cols liquid">
-													<input type="text" class="form_input" disabled>
-												</div>
+							<table class="data_search_field">
+								<tr>
+									<th><span class="data_search_label">조회구분</span></th>
+									<td>
+										<div class="inline_flex_item">
+											<div class="inline_flex_cols"><select class="form_select min_wid"><option>전체</option></select></div>
+											<div class="inline_flex_cols liquid">
+												<input type="text" class="form_input" disabled>
 											</div>
 										</div>
-									</div>
-									<div class="data_search_item">
-										<div class="data_search_label_cols"><span class="data_search_label">고객구분</span></div>
-										<div class="data_search_form_cols">
-											<div class="data_search_textdom">등록고객, 간편고객, 원포인트코칭</div>
-										</div>
-									</div>
-								</div>
-								<div class="data_search_row">
-									<div class="data_search_item">
-										<div class="data_search_label_cols"><span class="data_search_label">저장기간</span></div>
-										<div class="data_search_form_cols">
-											<div class="search_inform_grid">
-												<div class="search_infrom_cols">
-													<div class="inline_flex_item">
-														<div class="inline_flex_cols liquid">
-															<input type="text" class="form_input calendar" value="2024-06-07">
-														</div>
-														<div class="inline_flex_cols">
-															<span class="inline_flex_else">~</span>
-														</div>
-														<div class="inline_flex_cols liquid">
-															<input type="text" class="form_input calendar" value="2024-06-07">
-														</div>
-													</div>
-												</div>
-												<div class="search_infrom_cols">
-													<select class="form_select"><option>취급자</option></select>
-												</div>
-												<div class="search_infrom_cols">
-													<div class="inline_flex_item">
-														<div class="inline_flex_cols">
-															<div class="search_sm_container">
-																<input type="text" class="input_search_sm" value="23015245">
-																<button class="btn_search_sm"><span class="hdtext">검색</span></button>
-															</div>
-														</div>
-														<div class="inline_flex_cols liquid">
-															<input type="text" class="form_input" value="한새봄/한새봄/청주TC">
-														</div>
-														<div class="inline_flex_cols">
-															<button class="btn_control_box">조회</button>
-														</div>
-													</div>
-												</div>
+									</td>
+									<th><span class="data_search_label">고객구분</span></th>
+									<td><div class="data_search_textdom">등록고객, 간편고객, 원포인트코칭</div></td>
+								</tr>
+								<tr>
+									<th><span class="data_search_label">저장기간</span></th>
+									<td>
+										<div class="inline_flex_item">
+											<div class="inline_flex_cols liquid">
+												<input type="text" class="form_input calendar" value="2024-06-07">
+											</div>
+											<div class="inline_flex_cols">
+												<span class="inline_flex_else">~</span>
+											</div>
+											<div class="inline_flex_cols liquid">
+												<input type="text" class="form_input calendar" value="2024-06-07">
 											</div>
 										</div>
-									</div>
-								</div>
-							</div>
+									</td>
+									<th>
+										<select class="form_select"><option>취급자</option></select>
+									</th>
+									<td>
+										<div class="inline_flex_item">
+											<div class="inline_flex_cols">
+												<div class="search_sm_container">
+													<input type="text" class="input_search_sm" value="23015245">
+													<button class="btn_search_sm"><span class="hdtext">검색</span></button>
+												</div>
+											</div>
+											<div class="inline_flex_cols liquid">
+												<input type="text" class="form_input" value="한새봄/한새봄/청주TC">
+											</div>
+											<div class="inline_flex_cols">
+												<button class="btn_control_box">조회</button>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
 						</form>
 					</div>
 				</div>
 				<div class="list_tb_wrap">
 					<table class="list_tb">
+						<colgroup>
+							<col style="width:7%;">
+							<col style="width:5%;">
+							<col style="width:9%;">
+							<col style="width:9%;">
+							<col style="width:12%;">
+							<col>
+							<col style="width:10%;">
+							<col style="width:10%;">
+							<col style="width:10%;">
+							<col style="width:10%;">
+						</colgroup>
 						<thead>
 							<tr>
 								<th><span class="list_thtext">No.1</span></th>
@@ -237,6 +237,20 @@
 						</tbody>
 					</table>
 				</div>
+				<script>
+					$(function() {
+						$(".form_input.calendar").datepicker({
+							monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+							dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+							changeMonth: true,
+							changeYear: true,
+							dateFormat: 'yy-mm-dd',
+							beforeShow(input, inst) {
+		
+							}
+						});
+					});
+				</script>
 			</main>
 		</div>
 	</body>
