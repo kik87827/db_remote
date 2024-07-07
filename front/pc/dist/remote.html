@@ -17,7 +17,7 @@
 </head>
 
 <body class="front_body">
-	<div class="page_wrap">
+	<div class="page_wrap user_wrap">
 		<header class="user_header_wrap">
 			<div class="user_header_inner">
 				<div class="left_cols">
@@ -45,13 +45,13 @@
 			<div class="left_panel">
 				<div class="process_wrap">
 					<ul class="process_list">
-						<li class="active">
+						<li class="active line_active">
 							<div class="process_item">
 								<span class="process_item_bullet">1</span>
 								<span class="process_item_text">고객연결</span>
 							</div>
 						</li>
-						<li class="active">
+						<li class="active line_active">
 							<div class="process_item">
 								<span class="process_item_bullet">2</span>
 								<span class="process_item_text">기본안내</span>
@@ -107,7 +107,9 @@
 						<ul class="viewer_summary_list">
 							<li><a href="#" class="viewer_summary_item">우리나라 주요 암 발생 현황</a></li>
 							<li><a href="#" class="viewer_summary_item">상품 설명서</a></li>
-							<li><a href="#" class="viewer_summary_item active">가입제안서</a></li>
+							<li><a href="#" class="viewer_summary_item active">가입제안서1</a></li>
+							<li><a href="#" class="viewer_summary_item active">가입제안서2</a></li>
+							<li><a href="#" class="viewer_summary_item active">가입제안서3</a></li>
 						</ul>
 					</div>
 				</div>
@@ -141,6 +143,13 @@
 			</div>
 		</main>
 	</div>
+	<script>
+		window.addEventListener("load", () => {
+			remoteDocuList({
+				scrollView: 3
+			});
+		});
+	</script>
 </body>
 
 </html>
