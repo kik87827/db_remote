@@ -216,11 +216,16 @@ input.props_form:checked{
 .btn_sbox.skin2:before{}
 .btn_sbox.skin2 .sbox_text{color:#00854A; font-weight:bold;}
 
+.btn_sbox.skin3{border:1px solid #1A1A1A;}
+.btn_sbox.skin3:before{}
+.btn_sbox.skin3 .sbox_text{color:#1A1A1A; font-weight:bold;}
+
 
 .btn_sbox.link{padding-right:5px;}
 .btn_sbox.link:after{display:block;content:'';width:16px; height:16px; background:url("../images/ico_link_allow15x15.png") no-repeat 50% 50%/100% auto; flex:0 0 16px;}
 .btn_sbox.link .sbox_text{}
 .btn_sbox.link.skin2:after{background-image:url("../images/ico_link_green_allow16x16.png")}
+.btn_sbox.link.skin3:after{background-image:url("../images/ico_link_skin2_allow16x16.png")}
 
 .btn_sbox.refresh{}
 .btn_sbox.refresh:after{display:block;content:'';width:16px; height:16px; background:url("../images/ico_refresh.png") no-repeat 50% 50%/100% auto; flex:0 0 16px;}
