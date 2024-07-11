@@ -237,6 +237,28 @@
 						</tbody>
 					</table>
 				</div>
+				<!-- popup -->
+				<div class="popup_wrap" id="search_men_popup">
+					<div class="bg_dim"></div>
+					<div class="popup_item">
+						<div class="popup_title_row">
+							<h3 class="popup_title">등록고객 검색</h3>
+						</div>
+						<div class="popup_contents_row">
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.
+						</div>
+						<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+					</div>
+				</div>
+				<!-- // popup -->
 				<script>
 					$(function() {
 						$(".form_input.calendar").datepicker({
@@ -249,6 +271,30 @@
 		
 							}
 						});
+
+
+						// 인스턴스 선언
+						let search_men_popup = new DesignPopup({
+							selector: "#search_men_popup",
+							beforeCallback(){
+		
+							},
+							callback(){
+		
+							},
+							closeCallback(){
+							}
+						});
+						
+
+						// 퍼블확인용
+						let url = window.location.href.split('?')[1];
+						let url_2 = url !== undefined ? url.split('#')[0] : null;
+						if (url_2 === "popup_01") {
+							// 인스턴스 호출
+							search_men_popup.popupShow(); // show
+							// search_men_popup.popupShow(); // hide
+						}
 					});
 				</script>
 			</main>
