@@ -1,3 +1,7 @@
+$(function(){
+  formCommon();
+});
+
 
 function remoteDocuList(option = {}){
     const viewer_summary_scroll = document.querySelector(".viewer_summary_scroll");
@@ -8,6 +12,20 @@ function remoteDocuList(option = {}){
     } 
 }
 
+function formCommon(){
+  $(document).on("focus",'.input_search_sm', function(e){
+    let thisObj = $(this);
+    let thisObjParent = thisObj.closest(".search_sm_container");
+    
+    thisObjParent.addClass("focus");
+  });
+  $(document).on("focusout",'.input_search_sm', function(){
+    let thisObj = $(this);
+    let thisObjParent = thisObj.closest(".search_sm_container");
+    
+    thisObjParent.removeClass("focus");
+  });
+}
 
 
 /* popup */
