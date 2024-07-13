@@ -243,13 +243,33 @@ input[type="checkbox"].props_form:checked{
 
 
 .props_item_list{display:flex; flex-wrap:wrap; gap:20px;}
+.props_item_list.align2{justify-content: space-between;}
+.props_item_list.align3{flex-direction: column; gap:14px;}
+.props_item_list.align3 > li{vertical-align: top;flex:0; font-size:0;}
 .props_item_list > li{}
 .props_item_list > li:last-of-type{}
 input[type="radio"].props_form{border-radius:100%;background-color:#fff;}
 input[type="radio"].props_form:checked{border:5px solid #00854A;}
 input[type="radio"].props_form:checked + .props_label{}
-.props_item{display:inline-flex;gap:8px; color:#000; font-size:14px;}
+.props_item{display:inline-flex;gap:8px; }
 .props_label{font-size:14px; color:#000000; display:inline-block; cursor: pointer;}
+.props_obj_group{display:flex; gap:10px; align-items: center;}
+.props_obj_keyword{font-size:14px; color:#000000;line-height:1; font-size:14px; }
+.props_motion_item{position:relative;}
+input.props_motion_form{display:block;width:100%;height:100%; position:absolute;top:0;left:0; appearance: none; -webkit-appearance: none; cursor: pointer;}
+input.props_motion_form:checked + .props_motion_label{}
+input.props_motion_form:checked + .props_motion_label:before{background:#00854A;left:21px;}
+.props_motion_label{width:40px;height:22px; display:block; position:relative; border-radius:100px; color:transparent; background:#eee; cursor: pointer;}
+.props_motion_label:before{display:block;content:'';width:14px;height:14px; background:#AAAAAA; border-radius : 100%; position:absolute;top:50%;left:4px; transform: translateY(-50%);}
+
+.range_tb{display:table;width:100%;}
+.range_tr{display:table-row;}
+.range_tr:last-of-type .range_cell{padding-bottom:0;}
+.range_cell{display:table-cell;vertical-align: middle; padding-bottom:26px;}
+.range_cell.define_label{width:94px;padding-right:20px;}
+.range_cell.define_form{}
+.range_label{}
+.range_form_item{}
 
 
 .btn_box{display:inline-flex;padding:10px 15px; min-height:44px; align-items: center; background:#4D5057; border-radius:8px; box-sizing: border-box; gap:4px;}
@@ -479,6 +499,11 @@ input.form_input{}
 }
 .emp_word{font-weight:bold;}
 .mid_emp_title{font-size:22px; font-weight:bold; color:#000; margin-bottom:30px; text-align: center;}
+
+.control_container{}
+.control_row{padding-bottom:20px; margin-bottom:20px; border-bottom:1px solid #eee}
+.control_row:last-of-type{border-bottom:0;padding-bottom:0;margin-bottom:0;}
+
 
 /* 공통 popup */
 .popup_wrap{position:fixed;top:0;left:0;width:100%;height:100%;z-index:100000;display:none;align-items:center;justify-content:center;min-width:280px;overflow:hidden;flex-wrap:wrap;}

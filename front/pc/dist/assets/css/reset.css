@@ -53,3 +53,5 @@ select::-ms-expand {display: none;}
 :-ms-input-placeholder{color:#999 !important;font-family: 'Malgun Gothic','맑은 고딕','Malgun Gothic Webfont';}
 ::-ms-input-placeholder{color:#999 !important;font-family: 'Malgun Gothic','맑은 고딕','Malgun Gothic Webfont';}
 ::input-placeholder{color:#999;font-family: 'Malgun Gothic','맑은 고딕','Malgun Gothic Webfont';}
+
+.mt20{margin-top:20px !important;}

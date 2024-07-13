@@ -13,8 +13,8 @@
 						<div class="user_control_wrap">
 							<ul class="user_control_list">
 								<li><a href="#" class="user_control_box"><i class="ico call"></i><span class="user_control_text">010-1234-4556</span></a></li>
-								<li><a href="#" class="user_control_box"><i class="ico send"></i><span class="user_control_text">URL 발송</span></a></li>
-								<li><a href="#" class="user_control_box"><i class="ico setting"></i><span class="user_control_text">환경설정</span></a></li>
+								<li><a href="#" class="user_control_box" id="btn_url_call"><i class="ico send"></i><span class="user_control_text">URL 발송</span></a></li>
+								<li><a href="#" class="user_control_box" id="btn_setting_call"><i class="ico setting"></i><span class="user_control_text">환경설정</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -183,7 +183,7 @@
 				<div class="popup_contents_row">
 					<div class="control_container">
 						<div class="control_row">
-							<ul class="props_item_list">
+							<ul class="props_item_list align2">
 								<li>
 									<div class="props_obj_group">
 										<span class="props_obj_keyword">영상촬영</span>
@@ -220,7 +220,6 @@
 									<div class="range_cell define_form">
 										<div class="range_form_item">
 											<input type="range" class="range_form">
-											<div class="range_display"></div>
 										</div>
 									</div>
 								</div>
@@ -229,12 +228,11 @@
 									<div class="range_cell define_form">
 										<div class="range_form_item">
 											<input type="range" class="range_form">
-											<div class="range_display"></div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<ul class="props_item_list valign">
+							<ul class="props_item_list align3 mt20">
 								<li>
 									<div class="props_item">
 										<input type="checkbox" class="props_form" id="control_form_01">
@@ -268,7 +266,7 @@
 				let urlPopup = new DesignPopup({
 					selector: "#urlPopup",
 					beforeCallback(){
-
+						$('input[type="range"]').rangeslider('update', true);
 					},
 					callback(){
 
@@ -279,7 +277,7 @@
 				let settingPopup = new DesignPopup({
 					selector: "#settingPopup",
 					beforeCallback(){
-
+						//$('.range_form').rangeslider('update', true);
 					},
 					callback(){
 
@@ -308,17 +306,29 @@
 				/* document.querySelector("#btnCall").addEventListener("click",()=>{
 					designPopup.popupShow(); // show
 				}); */
+				document.querySelector("#btn_url_call").addEventListener("click",()=>{
+					// 인스턴스 호출
+					urlPopup.popupShow(); // show
+					// urlPopup.popupShow(); // hide
+				});
+				document.querySelector("#btn_setting_call").addEventListener("click",()=>{
+					// 인스턴스 호출
+					settingPopup.popupShow(); // show
+					// settingPopup.popupShow(); // hide
+				});
 			});
 
 			$(function(){
-				// range_form
-				$('input[type="range"]').rangeslider({
+				// range_form init
+
+				// https://rangeslider.js.org/  참고
+				$('.range_form').rangeslider({
 	
 					// Feature detection the default is `true`.
 					// Set this to `false` if you want to use
 					// the polyfill also in Browsers which support
 					// the native <input type="range"> element.
-					polyfill: true,
+					polyfill: false,
 	
 					// Default CSS classes
 					rangeClass: 'rangeslider',

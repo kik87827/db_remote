@@ -19,14 +19,17 @@
 </head>
 
 <body class="front_body">
-	<div style="margin:50px;">
-		<input type="range" class="range_form">
+	<div class="page_wrap user_wrap">
+
+		<div style="margin:50px;">
+			<input type="range" class="range_form">
+		</div>
 	</div>
 
 	<script>
 		$(function() {
 			// range_form
-			$('input[type="range"]').rangeslider({
+			$('.range_form').rangeslider({
 
 				// Deactivate the feature detection
 				polyfill: false,
