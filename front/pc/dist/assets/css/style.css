@@ -338,7 +338,18 @@ input.props_motion_form:checked + .props_motion_label:before{background:#00854A;
 .btn_sbox.check .sbox_text{}
 
 
+.mid_tab_wrap{}
+.mid_tab_list{}
+.mid_tab_list > li{}
+.mid_tab{}
+.mid_tab_text{}
+.mid_tab.active{}
+.mid_tab.active .mid_tab_text{}
 
+.mid_gallery_wrap{}
+.mid_gallery_list{}
+.mid_gallery_list > li{}
+.mid_gallery_item{}
 
 /* viewer */
 .page_wrap.user_wrap{display:flex;flex-direction: column;min-height:100vh;}
@@ -513,6 +524,7 @@ input.form_input{}
 .control_row:last-of-type{border-bottom:0;padding-bottom:0;margin-bottom:0;}
 
 .list_top_row{margin-bottom:10px;}
+.list_top_row.align2{}
 
 .contents_note_section{margin-top:28px; font-size:13px; color:#767676; line-height:1.4;}
 
