@@ -34,6 +34,7 @@ input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px
 .middle_wrap{}
 .middle_wrap.pixed{width:1000px; margin:0 auto 110px;}
 .middle_wrap.gap2{margin-top:50px;}
+.middle_wrap.gap3{margin-top:35px;}
 .middle_wrap.pixed.size2{width:800px;}
 .footer_wrap{text-align: center;padding:120px 30px 50px}
 .footer_copy{font-size:16px; color:#AAAAAA; text-align: center;}
@@ -120,6 +121,7 @@ input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px
 .list_tb_wrap.skin2 .list_tb{}
 .list_tb_wrap.skin2 .list_tb th{background:none;}
 
+.mid_tab_wrap + .list_tb_zone{margin-top:17px;}
 .list_tb_zone{}
 .list_tb_fraction{font-size:14px; padding:0 10px 8px; color:#000000; letter-spacing: -0.25px;;}
 .list_tb td.nodata_td{}
@@ -339,17 +341,17 @@ input.props_motion_form:checked + .props_motion_label:before{background:#00854A;
 
 
 .mid_tab_wrap{}
-.mid_tab_list{}
+.mid_tab_list{display:flex;gap:7px;flex-wrap:wrap;}
 .mid_tab_list > li{}
-.mid_tab{}
-.mid_tab_text{}
-.mid_tab.active{}
-.mid_tab.active .mid_tab_text{}
+.mid_tab{display:inline-flex;min-height:37px; align-items: center; justify-content: center; border:1px solid #767676; border-radius:100px; padding:10px 20px; box-sizing: border-box;}
+.mid_tab_text{font-size:14px; color:#767676;}
+.mid_tab.active{background-color:#00854A; border-color:#00854A;}
+.mid_tab.active .mid_tab_text{color:#fff;}
 
-.mid_gallery_wrap{}
-.mid_gallery_list{}
-.mid_gallery_list > li{}
-.mid_gallery_item{}
+.mid_gallery_wrap{margin-top:50px;}
+.mid_gallery_list{display:flex; flex-wrap:wrap; gap:40px 15px;margin-right:-15px;}
+.mid_gallery_list > li{flex:0 0 calc(25% - 15px);display:flex; }
+.mid_gallery_item{border-radius: 20px; background:#EFEFEF;flex:1;padding:20px;}
 
 /* viewer */
 .page_wrap.user_wrap{display:flex;flex-direction: column;min-height:100vh;}
@@ -523,8 +525,8 @@ input.form_input{}
 .control_row{padding-bottom:20px; margin-bottom:20px; border-bottom:1px solid #eee}
 .control_row:last-of-type{border-bottom:0;padding-bottom:0;margin-bottom:0;}
 
-.list_top_row{margin-bottom:10px;}
-.list_top_row.align2{}
+.list_top_row{margin-bottom:10px; display:flex;}
+.list_top_row.align2{justify-content: flex-end;}
 
 .contents_note_section{margin-top:28px; font-size:13px; color:#767676; line-height:1.4;}
 
