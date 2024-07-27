@@ -97,13 +97,13 @@ class DesignPopup {
     if ("callback" in this.option) {
       this.option.callback();
     }
-    if (!!this.design_popup_wrap_active) {
+    /* if (!!this.design_popup_wrap_active) {
       this.design_popup_wrap_active.forEach((element, index) => {
         if (this.design_popup_wrap_active !== this.selector) {
           element.classList.remove("active");
         }
       });
-    }
+    } */
     this.layer_wrap_parent.append(this.selector);
     this.dimCheck();
   }
@@ -118,9 +118,9 @@ class DesignPopup {
       this.selector.classList.remove("motion_end");
       setTimeout(() => {
         this.selector.classList.remove("active");
+        this.dimCheck();
       }, 400);
       this.design_popup_wrap_active = document.querySelectorAll(".popup_wrap.active");
-      this.dimCheck();
       if ("closeCallback" in this.option) {
         this.option.closeCallback();
       }

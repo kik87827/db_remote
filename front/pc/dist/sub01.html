@@ -280,7 +280,7 @@
 									</div>
 								</div>
 								<div class="grid_right">
-									<a href="javascript:;" class="btn_sbox link skin3"><span class="sbox_text">셀프동의</span></a>
+									<a href="javascript:;" class="btn_sbox link skin3" id="btn_self_call"><span class="sbox_text">셀프동의</span></a>
 								</div>
 							</div>
 						</form>
@@ -388,6 +388,18 @@
 					<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
 				</div>
 			</div>
+			<div class="popup_wrap" id="self_popup">
+				<div class="bg_dim"></div>
+				<div class="popup_item size3">
+					<div class="popup_title_row">
+						<h3 class="popup_title">고객정보 셀프등록 전송</h3>
+					</div>
+					<div class="popup_contents_row">
+						내용이 들어갑니다.
+					</div>
+					<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+				</div>
+			</div>
 			<!-- // popup -->
 			<script>
 				$(function() {
@@ -414,6 +426,21 @@
 						},
 						closeCallback() {}
 					});
+					let self_popup = new DesignPopup({
+						selector: "#self_popup",
+						beforeCallback() {
+
+						},
+						callback() {
+
+						},
+						closeCallback() {}
+					});
+
+					// 고객정보 셀프등록 전송 event
+					document.querySelector("#btn_self_call").addEventListener("click", (e) => {
+						self_popup.popupShow(); // show
+					});
 
 
 					// 퍼블확인용
@@ -423,6 +450,10 @@
 						// 인스턴스 호출
 						search_men_popup.popupShow(); // show
 						// search_men_popup.popupShow(); // hide
+					} else if (url_2 === "popup_02") {
+						// 인스턴스 호출
+						self_popup.popupShow(); // show
+						// self_popup.popupShow(); // hide
 					}
 				});
 			</script>
