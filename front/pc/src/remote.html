@@ -117,14 +117,25 @@
 							<li><a href="#" class="btn_viewer_box"><i class="ico one"></i><span class="viewer_box_text">한 페이지 보기</span></a></li>
 							<li><a href="#" class="btn_viewer_box"><i class="ico width"></i><span class="viewer_box_text">너비 맞추기</span></a></li>
 							<li><a href="#" class="btn_viewer_box"><i class="ico move"></i><span class="viewer_box_text">이동</span></a></li>
-							<li><a href="#" class="btn_viewer_box active"><i class="ico underline"></i><span class="viewer_box_text">밑줄</span></a></li>
-							<li><a href="#" class="btn_viewer_box"><i class="ico pen"></i><span class="viewer_box_text">형광펜</span></a></li>
+							<li><a href="#" class="btn_viewer_box"><i class="ico underline"></i><span class="viewer_box_text">밑줄</span></a></li>
+							<li><a href="#" class="btn_viewer_box" data-target="#local_pallet_popup"><i class="ico pen"></i><span class="viewer_box_text">형광펜</span></a></li>
 							<li><a href="#" class="btn_viewer_box"><i class="ico text"></i><span class="viewer_box_text">텍스트</span></a></li>
 							<li><a href="#" class="btn_viewer_box"><i class="ico stamp"></i><span class="viewer_box_text">스템프</span></a></li>
 							<li><a href="#" class="btn_viewer_box"><i class="ico eraser"></i><span class="viewer_box_text">지우기</span></a></li>
 							<li><a href="#" class="btn_viewer_box"><i class="ico color"></i><span class="viewer_box_text">색</span></a></li>
 						</ul>
+					</div>
+					<!-- local popup -->
+					<div class="local_popup_wrap" id="local_pallet_popup">
+						<div class="local_title_row">
+							<h3 class="local_title">색상</h3>
+						</div>
+						<div class="local_contents_row">
+							내용이 들어갑니다.
+						</div>
+						<a href="javascript:;" class="btn_local_close"><span class="hdtext">팝업 닫기</span></a>
 					</div>	
+					<!-- // local popup -->	
 				</div>
 			</main>
 		</div>
@@ -257,8 +268,26 @@
 		</div>
 		<!-- // popup -->
 		<script>
+			
+
+
 			window.addEventListener("load",()=>{
 				remoteDocuList({scrollView : 3});
+
+				// 퍼블확인용
+				let url = window.location.href.split('?')[1];
+				let url_2 = url !== undefined ? url.split('#')[0] : null;
+				if (url_2 === "url_popup") {
+					// 인스턴스 호출
+					urlPopup.popupShow(); // show
+					// urlPopup.popupShow(); // hide
+				}else if(url_2 === "setting_popup"){
+					// 인스턴스 호출
+					settingPopup.popupShow(); // show
+					// settingPopup.popupShow(); // hide
+				}else if(url_2 === "color_popup"){
+					document.querySelector("[data-target='#local_pallet_popup']").click();
+				}
 			});
 
 			document.addEventListener("DOMContentLoaded", function() {
@@ -285,19 +314,10 @@
 					closeCallback(){
 					}
 				});
+				
+				viewerFunc();
 
-				// 퍼블확인용
-				let url = window.location.href.split('?')[1];
-				let url_2 = url !== undefined ? url.split('#')[0] : null;
-				if (url_2 === "url_popup") {
-					// 인스턴스 호출
-					urlPopup.popupShow(); // show
-					// urlPopup.popupShow(); // hide
-				}else if(url_2 === "setting_popup"){
-					// 인스턴스 호출
-					settingPopup.popupShow(); // show
-					// settingPopup.popupShow(); // hide
-				}
+				
 
 				// designPopup.popupShow(); // show
 				// designPopup.popupShow(); // hide
@@ -349,6 +369,54 @@
 				});
 			});
 			// range
+
+
+			// btn_viewer_box 이벤트
+			function viewerFunc(){
+				let btn_viewer_box = document.querySelectorAll(".btn_viewer_box");
+				let right_panel = document.querySelector(".right_panel");
+				let btn_local_close = document.querySelectorAll(".btn_local_close");
+				if(!!btn_viewer_box){
+					btn_viewer_box.forEach((item)=>{
+						item.addEventListener("click",(e)=>{
+							e.preventDefault();
+							let thisItem = e.currentTarget;
+							let thisItemTarget = document.querySelector(thisItem.getAttribute("data-target"));
+							
+							let thisParent = thisItem.closest(".viewer_edit_list");
+							let thisParentBox = thisParent.querySelectorAll(".btn_viewer_box");
+
+							thisParentBox.forEach((item)=>{
+								if(item !== thisItem){
+									item.classList.remove("active");
+								}
+							});
+							/* if(thisItem.classList.contains("active")){
+
+							} */
+							thisItem.classList.add("active");
+
+							if(!!thisItemTarget){
+								thisItemTarget.classList.add("active");
+								let thisItemPos = thisItem.getBoundingClientRect().top + window.scrollY - thisItemTarget.getBoundingClientRect().height - right_panel.getBoundingClientRect().top - 2;
+								setTimeout(()=>{
+									thisItemTarget.style.top = thisItemPos + "px";
+								},30);
+							}
+						});
+					});
+				}
+				if(!!btn_local_close){
+					btn_local_close.forEach((item)=>{
+						item.addEventListener("click",(e)=>{
+							e.preventDefault();
+							let thisItem = e.currentTarget;
+							let thisParent = thisItem.closest(".local_popup_wrap");
+							thisParent.classList.remove("active");
+						});
+					});
+				}
+			}
 		</script>
 	</body>
 </html>

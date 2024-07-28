@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+	<body class="front_body">
+		<div class="page_wrap">
+			<header class="header_wrap">
+				<div class="hgroup_inner">
+					<h1 class="toplogo">
+						<a href="#" class="toplogo_link">
+							<img src="./assets/images/toplogo.png" class="toplogo_main" alt="DB손해보험">
+							<img src="./assets/images/toplogo_lotte.png" class="toplogo_sub" alt="원격 컨설팅">
+						</a>
+					</h1>
+				</div>
+				<nav class="hgroup_nav_wrap">
+					<ul class="hgroup_nav_list">
+						<li>
+							<a href="#" class="hgroup_home type2"><i class="ico type2"></i><span class="home_text">홈 화면</span></a>
+						</li>
+						<li>
+							<a href="#" class="hgroup_nav_item">
+								<span class="hgroup_nav_text">상담이어하기</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="hgroup_nav_item">
+								<span class="hgroup_nav_text">상담준비</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="hgroup_nav_item">
+								<span class="hgroup_nav_text">원격컨설팅</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="hgroup_nav_item active">
+								<span class="hgroup_nav_text">상담이력</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="hgroup_nav_item">
+								<span class="hgroup_nav_text">계약/심사현황</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="hgroup_nav_item">
+								<span class="hgroup_nav_text">더보기</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<main class="middle_wrap pixed">
+				내용이 들어갑니다.
+			</main>
+		</div>
+		<!-- popup -->
+		<div class="popup_wrap" id="memoPopup">
+			<div class="bg_dim"></div>
+			<div class="popup_item size2">
+				<div class="popup_title_row">
+					<h3 class="popup_title">상담메모</h3>
+				</div>
+				<div class="popup_contents_row">
+					내용이 들어갑니다.
+				</div>
+				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+			</div>
+		</div>
+		<div class="popup_wrap" id="callPopup">
+			<div class="bg_dim"></div>
+			<div class="popup_item size4">
+				<div class="popup_title_row">
+					<h3 class="popup_title">통화내역</h3>
+				</div>
+				<div class="popup_contents_row">
+					내용이 들어갑니다.
+				</div>
+				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+			</div>
+		</div>
+		<!-- // popup -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				// 인스턴스 선언
+				let memoPopup = new DesignPopup({
+					selector: "#memoPopup",
+					beforeCallback(){
+						
+					},
+					callback(){
+
+					},
+					closeCallback(){
+					}
+				});
+				let callPopup = new DesignPopup({
+					selector: "#callPopup",
+					beforeCallback(){
+					},
+					callback(){
+
+					},
+					closeCallback(){
+					}
+				});
+
+				// 퍼블확인용
+				let url = window.location.href.split('?')[1];
+				let url_2 = url !== undefined ? url.split('#')[0] : null;
+				if (url_2 === "popup_form") {
+					// 인스턴스 호출
+					memoPopup.popupShow(); // show
+					// memoPopup.popupShow(); // hide
+				}else if(url_2 === "popup_history"){
+					// 인스턴스 호출
+					callPopup.popupShow(); // show
+					// callPopup.popupShow(); // hide
+				}
+			});
+		</script>
+	</body>
+</html>
