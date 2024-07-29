@@ -67,24 +67,29 @@
 				</ul>
 			</nav>
 		</header>
-		<main class="middle_wrap pixed">
-			내용이 들어갑니다.
+		<main class="middle_wrap pixed gap4">
+			<div class="middle_contents_wrap">
+				내용이 들어갑니다.
+			</div>
 			<!-- middle local popup -->
-			<div class="middle_local_popup">
-				<div class="middle_local_title_row">
-					<h3 class="middle_local_title">심사신청 / 확인</h3>
-					<div class="middle_local_else_wrap">
-						<a href="javascript:;" class="btn_midlocal_control prev"><span class="hdtext">이전</span></a>
-						<div class="fraction_group">
-							<strong class="fraction_current">1</strong>
-							<span class="fraction_part">/</span>
-							<span class="fraction_length">5</span>
+			<div class="middle_local_popup_wrap" id="check_popup">
+				<div class="middle_local_popup">
+					<div class="middle_local_title_row">
+						<h3 class="middle_local_title">심사신청 / 확인</h3>
+						<div class="middle_local_else_wrap">
+							<a href="javascript:;" class="btn_midlocal_control prev"><span class="hdtext">이전</span></a>
+							<div class="fraction_group">
+								<strong class="fraction_current">1</strong>
+								<span class="fraction_part">/</span>
+								<span class="fraction_length">5</span>
+							</div>
+							<a href="javascript:;" class="btn_midlocal_control next"><span class="hdtext">다음</span></a>
+							<a href="javascript:;" class="btn_midlocal_close"><span class="hdtext">닫기</span></a>
 						</div>
-						<a href="javascript:;" class="btn_midlocal_control next"><span class="hdtext">다음</span></a>
 					</div>
-				</div>
-				<div class="middle_local_contents">
-					내용이 들어갑니다.
+					<div class="middle_local_contents">
+						내용이 들어갑니다.
+					</div>
 				</div>
 			</div>
 			<!-- // middle local popup -->
@@ -96,8 +101,18 @@
 			let url = window.location.href.split('?')[1];
 			let url_2 = url !== undefined ? url.split('#')[0] : null;
 			if (url_2 === "local_popup") {
-
+				document.querySelector(".middle_contents_wrap").style.display = "none";
+				document.querySelector("#check_popup").classList.add("active");
 			}
+
+			// local popup event
+			document.querySelector(".btn_midlocal_close").addEventListener("click", (e) => {
+				e.preventDefault();
+				let thisItem = e.currentTarget;
+				let thisParent = thisItem.closest(".middle_local_popup_wrap");
+				thisParent.classList.remove("active");
+				document.querySelector(".middle_contents_wrap").style.display = "block";
+			});
 		});
 	</script>
 </body>

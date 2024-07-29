@@ -31,10 +31,11 @@ img.toplogo_sub{max-width:70.5px;vertical-align: middle;}
 .search_field_container{height:50px; border-radius:100px; background:#E3EEE1;display:flex; align-items: center;width:100%;}
 input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px; color:#000; font-weight:bold; padding:0 0 0 25px;}
 .btn_search_submit{width:24px;height:24px;background:url("../images/btn_search_submit.png") no-repeat 50% 50%/100% auto;margin:0 13px;}
-.middle_wrap{flex:1; position:relative;}
+.middle_wrap{flex:1; position:relative; display:flex; flex-direction: column;}
 .middle_wrap.pixed{width:1000px; margin:0 auto 110px;}
 .middle_wrap.gap2{margin-top:50px;}
 .middle_wrap.gap3{margin-top:35px;}
+.middle_wrap.gap4{margin-top:21px;}
 .middle_wrap.pixed.size2{width:800px;}
 .footer_wrap{text-align: center;padding:120px 30px 50px}
 .footer_copy{font-size:16px; color:#AAAAAA; text-align: center;}
@@ -617,6 +618,25 @@ input.props_form:checked + .docu_props_label{}
 .local_contents_row{padding:30px 20px 34px;}
 .btn_local_close{display:inline-block;width:30px;height:30px;position:absolute;top:15px;right:10px;font-size:0;line-height:0; background:url("../images/btn_popupclose.svg") no-repeat 50% 50%/100% auto;}
 
+.middle_local_popup_wrap{display:none; flex:1; position:relative;}
+.middle_local_popup_wrap.active{display:flex;}
+.middle_local_popup{display:flex; width:100%; flex-direction: column; border:1px solid #000000; border-radius:8px;position:relative;overflow:hidden;}
+.middle_local_title_row{flex:0 0 80px;padding:25px 28px 25px 28px;background:#85C240;display:flex; align-items: center; justify-content: space-between; gap:20px; box-sizing: border-box;}
+.middle_local_title{font-size:22px; font-weight:bold; color:#fff; letter-spacing: -1px;}
+.middle_local_else_wrap{display:flex; justify-content: flex-end; align-items: center;}
+.btn_midlocal_control{display:inline-block; vertical-align: middle; width:24px; height:24px; background-position:0 0; background-size:100% auto; background-repeat:no-repeat;}
+.btn_midlocal_control.prev{background-image:url("../images/ico_prev_box.svg");}
+.btn_midlocal_control.next{background-image:url("../images/ico_next_box.svg");}
+.fraction_group{margin:0 2px; background:#fff; border-radius:4px; display:flex; align-items: center; justify-content: center; text-align: center; min-height:20px; box-sizing: border-box; padding:2px 10px; min-width:40px;}
+.fraction_current{font-size:12px; color:#000000; font-weight:bold;}
+.fraction_part,
+.fraction_length{font-size:12px; color:#999999;}
+.fraction_part{}
+.fraction_length{}
+.btn_midlocal_close{margin-left:10px;display:inline-block;width:30px;height:30px;font-size:0;line-height:0; background:url("../images/btn_popupclose_w.svg") no-repeat 50% 50%/100% auto;}
+.middle_local_contents{flex:1;min-height:0;padding:25px 28px;}
+
+/* 심사신청/확인 */
 
 /* grid */
 .grid_container{display:flex; justify-content: space-between; align-items: center; gap:20px;}
@@ -658,3 +678,4 @@ input.props_form:checked + .docu_props_label{}
 .box_link_item .spec_row{}
 .box_link_item .keyword_text{font-size:14px; font-weight:bold; color:#000000;}
 .box_link_item .number_text{font-size:12px; color:#000000;margin-top:5px;}
+
