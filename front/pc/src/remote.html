@@ -269,25 +269,18 @@
 		<!-- // popup -->
 		<script>
 			
+			// 퍼블확인용
+			let url = window.location.href.split('?')[1];
+			let url_2 = url !== undefined ? url.split('#')[0] : null;
 
 
 			window.addEventListener("load",()=>{
-				remoteDocuList({scrollView : 3});
-
-				// 퍼블확인용
-				let url = window.location.href.split('?')[1];
-				let url_2 = url !== undefined ? url.split('#')[0] : null;
-				if (url_2 === "url_popup") {
-					// 인스턴스 호출
-					urlPopup.popupShow(); // show
-					// urlPopup.popupShow(); // hide
-				}else if(url_2 === "setting_popup"){
-					// 인스턴스 호출
-					settingPopup.popupShow(); // show
-					// settingPopup.popupShow(); // hide
-				}else if(url_2 === "color_popup"){
-					document.querySelector("[data-target='#local_pallet_popup']").click();
+				if(url_2 === "color_popup"){
+					setTimeout(()=>{
+						document.querySelector("[data-target='#local_pallet_popup']").click();
+					},50);
 				}
+				remoteDocuList({scrollView : 3});
 			});
 
 			document.addEventListener("DOMContentLoaded", function() {
@@ -295,7 +288,7 @@
 				let urlPopup = new DesignPopup({
 					selector: "#urlPopup",
 					beforeCallback(){
-						$('input[type="range"]').rangeslider('update', true);
+						
 					},
 					callback(){
 
@@ -307,6 +300,10 @@
 					selector: "#settingPopup",
 					beforeCallback(){
 						//$('.range_form').rangeslider('update', true);
+						/* $('input[type="range"]').each(function(){
+
+							$(this).rangeslider('update', true);
+						}); */
 					},
 					callback(){
 
@@ -317,7 +314,15 @@
 				
 				viewerFunc();
 
-				
+				if (url_2 === "url_popup") {
+					// 인스턴스 호출
+					urlPopup.popupShow(); // show
+					// urlPopup.popupShow(); // hide
+				}else if(url_2 === "setting_popup"){
+					// 인스턴스 호출
+					settingPopup.popupShow(); // show
+					// settingPopup.popupShow(); // hide
+				}
 
 				// designPopup.popupShow(); // show
 				// designPopup.popupShow(); // hide

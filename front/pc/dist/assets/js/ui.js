@@ -25,6 +25,14 @@ function formCommon(){
     
     thisObjParent.removeClass("focus");
   });
+  $(document).on("click",'.d_tr_click tr', function(){
+    let thisObj = $(this);
+    let thisObjParent = thisObj.closest(".d_tr_click");
+
+    thisObjParent.find("tr").not(thisObj).removeClass("active");
+    
+    thisObj.toggleClass("active");
+  });
 }
 
 
