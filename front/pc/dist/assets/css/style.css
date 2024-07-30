@@ -303,6 +303,10 @@ input.props_motion_form:checked + .props_motion_label:before{background:#00854A;
 .btn_box.skin3 .btn_box_text{color:#fff; font-weight:bold;}
 
 .btn_box.size2{ min-height:51px;}
+.btn_box.size3{ min-height:59px; padding-left:22px;padding-right:22px;}
+.btn_box.size3.link{ padding-left:20px;padding-right:18px;}
+.btn_box.size3.link_reverse{ padding-left:18px;padding-right:20px;}
+
 
 
 .btn_sbox{display:inline-flex; gap:4px; min-height:34px; box-sizing: border-box; border-radius:4px; align-items: center; border:1px solid #767676; padding:5px 10px;}
@@ -608,12 +612,17 @@ input.props_form:checked + .docu_props_label{}
 .popup_contents_row .paging_wrap{margin-top:28px;}
 .popup_contents_row.type2{padding-top:25px;}
 .popup_contents_row.type3{padding-top:15px;}
+.popup_contents_row.type4{padding-top:20px;}
 .popup_btn_row{flex:0;padding:26px;display:flex;justify-content:center;position:relative;box-sizing:border-box;gap:20px;}
 .popup_btn_row:after{display:block;content:"";width:calc(100%-10px);height:26px;position:absolute;top:-26px;left:0;background:rgb(255,255,255);background:linear-gradient(0deg,rgb(255,255,255)0%,rgb(255,255,255)46%,rgba(255,255,255,0)100%);}
 .btn_popup_close{display:inline-block;width:30px;height:30px;position:absolute;top:30px;right:30px;font-size:0;line-height:0; background:url("../images/btn_popupclose.svg") no-repeat 50% 50%/100% auto;}
 /* .btn_popup_close:before, .btn_popup_close:after{width:14px;height:2px;display:block;content:"";position:absolute;top:50%;left:50%;background:#130F26;margin:-1px 0 0 -7px;transform:translateZ(0);-webkit-transform:translateZ(0);-ms-transform:translateZ(0);-moz-transform:translateZ(0);}
 .btn_popup_close:before{transform:rotate(45deg);-ms-transform:rotate(45deg);-webkit-transform:rotate(45deg);}
 .btn_popup_close:after{transform:rotate(-45deg);-ms-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);} */
+
+.popup_message_container{text-align: center;}
+.popup_message_main{font-size:16px; letter-spacing: -1px; font-weight:bold; color:#1A1A1A;}
+.popup_message_sub{font-size:14px; letter-spacing: -0.5px;color:#535353; margin-top:10px;}
 
 .local_popup_wrap{display:none;width:228px;z-index:5;position:absolute;top:0;right:17px;background:#fff;border-radius:20px; border:1px solid #00854A;}
 .local_popup_wrap.active{display:block;}
