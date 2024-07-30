@@ -19,7 +19,7 @@ html:not(.touchmode) ::-webkit-scrollbar {
 .front_body{ min-height:100vh;}
 .main_body{background:#F7FCF6;}
 /* .bg_page{background:#F7FCF6; position:fixed;top:6px;left:0;width:100%;height:calc(100% - 6px);} */
-.page_wrap{position:relative;z-index:5; display:flex; flex-direction: column;min-height:100vh;max-width:1920px;margin:0 auto;}
+.page_wrap{position:relative;z-index:5; display:flex; min-width:1000px; flex-direction: column;min-height:100vh;max-width:1920px;margin:0 auto;}
 .header_wrap{position:relative;padding:36px 0 0 0; flex:0;}
 .header_wrap:before{display:block;content:'';width:100%;height: 6px;background: linear-gradient(90deg, #A6CE39 0%, #2EB45D 100%); position:fixed;top:0;left:0;}
 .hgroup_inner{display:flex; justify-content: space-between; gap:20px; align-items: center; padding:0 100px;}
@@ -375,10 +375,23 @@ textarea.form_textarea:focus{border-color:#000;}
 .mid_tab.active{background-color:#00854A; border-color:#00854A;}
 .mid_tab.active .mid_tab_text{color:#fff;}
 
-.mid_gallery_wrap{margin-top:50px;}
-.mid_gallery_list{display:flex; flex-wrap:wrap; gap:40px 15px;margin-right:-15px;}
-.mid_gallery_list > li{flex:0 0 calc(25% - 15px);display:flex; }
-.mid_gallery_item{border-radius: 20px; background:#EFEFEF;flex:1;padding:20px;}
+.mid_gallery_wrap{margin:50px 0 25px;}
+.mid_gallery_list{display:flex; flex-wrap:wrap; gap:45px 100px;margin-right:-100px;}
+.mid_gallery_list > li{flex:0 0 calc(33.333% - 100px);display:flex; justify-content: flex-start;}
+.mid_gallery_list > li:nth-of-type(3n-1){justify-content: center; }
+.mid_gallery_list > li:nth-of-type(3n){justify-content: flex-end;}
+.mid_gallery_item{display:flex; gap:10px;}
+.mid_gallery_item .props_cols{flex:0;}
+.mid_gallery_item .props_cols .props_form{}
+.mid_gallery_item .item_cols{flex:1;}
+.mid_gallery_item .thumnail_row{position:relative;overflow:hidden;border-radius:30px;height:270px;width:240px;}
+.mid_gallery_item .thumnail_row > img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit: cover; object-position: 50% 50%;}
+.mid_gallery_item .control_row{display:flex; justify-content: center; margin-top:20px;}
+.mid_gallery_item .control_dl{display:flex; align-items: center; gap:10px;}
+.mid_gallery_item .control_dl dt{}
+.mid_gallery_item .control_dl dt .control_key{}
+.mid_gallery_item .control_dl dd{}
+.mid_gallery_item .control_dl dd .form_input{width:80px;text-align: center;}
 
 /* viewer */
 .page_wrap.user_wrap{display:flex;flex-direction: column;min-height:100vh;}
