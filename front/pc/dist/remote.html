@@ -148,7 +148,82 @@
 						<h3 class="local_title">색상</h3>
 					</div>
 					<div class="local_contents_row">
-						내용이 들어갑니다.
+						<div class="pallet_item_wrap">
+							<ul class="pallet_item_list">
+								<li>
+									<a href="javascript:;" class="pallet_item">
+										<div class="pallet_ico" style="background-color:#000;"></div>
+										<div class="pallet_value">블랙</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="pallet_item active">
+										<div class="pallet_ico" style="background-color:#288EC6;"></div>
+										<div class="pallet_value">블루</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="pallet_item">
+										<div class="pallet_ico" style="background-color:#815F44;"></div>
+										<div class="pallet_value">브라운</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="pallet_item">
+										<div class="pallet_ico" style="background-color:#78BA46;"></div>
+										<div class="pallet_value">그린</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="pallet_item">
+										<div class="pallet_ico" style="background-color:#808080;"></div>
+										<div class="pallet_value">그레이</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="pallet_item">
+										<div class="pallet_ico" style="background-color:#221A77;"></div>
+										<div class="pallet_value">네이비</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="pallet_item">
+										<div class="pallet_ico" style="background-color:#F27134;"></div>
+										<div class="pallet_value">오렌지</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="pallet_item">
+										<div class="pallet_ico" style="background-color:#F07790;"></div>
+										<div class="pallet_value">핑크</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="pallet_item">
+										<div class="pallet_ico" style="background-color:#8F429D;"></div>
+										<div class="pallet_value">퍼플</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="pallet_item">
+										<div class="pallet_ico" style="background-color:#E64134;"></div>
+										<div class="pallet_value">레드</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="pallet_item">
+										<div class="pallet_ico has_line" style="background-color:#fff;"></div>
+										<div class="pallet_value">화이트</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="pallet_item">
+										<div class="pallet_ico" style="background-color:#FCD848;"></div>
+										<div class="pallet_value">옐로우</div>
+									</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 					<a href="javascript:;" class="btn_local_close"><span class="hdtext">팝업 닫기</span></a>
 				</div>
@@ -291,14 +366,18 @@
 
 
 		window.addEventListener("load", () => {
+
+			// 퍼블 확인
 			if (url_2 === "color_popup") {
 				setTimeout(() => {
 					document.querySelector("[data-target='#local_pallet_popup']").click();
 				}, 50);
 			}
+
+
 			remoteDocuList({
 				scrollView: 3
-			});
+			}); // 우측 상단 스크롤
 		});
 
 		document.addEventListener("DOMContentLoaded", function() {
@@ -329,6 +408,8 @@
 			});
 
 			viewerFunc();
+
+			palletEvent(); // pallet event
 
 			if (url_2 === "url_popup") {
 				// 인스턴스 호출
@@ -434,6 +515,33 @@
 						let thisItem = e.currentTarget;
 						let thisParent = thisItem.closest(".local_popup_wrap");
 						thisParent.classList.remove("active");
+					});
+				});
+			}
+		}
+
+		// pallet event
+		function palletEvent() {
+			let pallet_item = document.querySelectorAll(".pallet_item");
+			if (!!pallet_item) {
+				pallet_item.forEach((item) => {
+					item.addEventListener("click", (e) => {
+						e.preventDefault();
+						let thisEvent = e.currentTarget;
+						let thisParent = thisEvent.closest(".pallet_item_list");
+						let notThisEvent = thisParent.querySelectorAll(".pallet_item");
+						let thisParentLayer = thisEvent.closest(".local_popup_wrap");
+
+						if (!!notThisEvent) {
+							notThisEvent.forEach((item) => {
+								if (item !== thisEvent) {
+									item.classList.remove("active");
+								}
+							});
+						}
+
+						thisEvent.classList.add("active");
+						thisParentLayer.classList.remove("active");
 					});
 				});
 			}

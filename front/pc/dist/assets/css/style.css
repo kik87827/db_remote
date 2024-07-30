@@ -692,3 +692,17 @@ input.props_form:checked + .docu_props_label{}
 .box_link_item .keyword_text{font-size:14px; font-weight:bold; color:#000000;}
 .box_link_item .number_text{font-size:12px; color:#000000;margin-top:5px;}
 
+
+/* pallet */
+.pallet_item_wrap{}
+.pallet_item_list{display:flex;flex-wrap:wrap;gap:20px 0; text-align: center;}
+.pallet_item_list > li{flex:0 0 33.333333%; box-sizing: border-box;}
+.pallet_item{display:inline-block;}
+.pallet_ico{width:28px;height:28px;border-radius:100%; margin:0 auto; box-sizing: border-box; display:flex; align-items: center; justify-content: center;}
+.pallet_ico:after{display:none;content:'';width:9px;height:7px;background:url("../images/ico_pallet_check.svg") no-repeat 0 0/100% auto;}
+.pallet_ico.has_line{border:1px solid #ccc;}
+.pallet_value{margin-top:8px; color:#000; letter-spacing: -0.5px;}
+.pallet_item.active{}
+.pallet_item.active .pallet_ico{}
+.pallet_item.active .pallet_ico:after{display:block;}
+.pallet_item.active .pallet_value{}
