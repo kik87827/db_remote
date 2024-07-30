@@ -255,6 +255,9 @@ input.input_search_sm{flex:1;line-height:1;box-sizing: border-box; padding:0 10p
 .mid_gatebox .ico.shape_09{background-image:url("../images/ico_more_gate_09.png");}
 .gate_text{font-size:16px; color:#000000;}
 
+.popup_inner_brick{margin-bottom:40px;}
+.popup_inner_brick:last-of-type{margin-bottom:0;}
+
 /* component */
 input.props_form{}
 input.props_form.type2{}
