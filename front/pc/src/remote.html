@@ -380,11 +380,9 @@
 				let settingPopup = new DesignPopup({
 					selector: "#settingPopup",
 					beforeCallback(){
-						//$('.range_form').rangeslider('update', true);
-						/* $('input[type="range"]').each(function(){
-
-							$(this).rangeslider('update', true);
-						}); */
+						setTimeout(()=>{
+							$('.range_form').rangeslider('update', true);
+						},30);
 					},
 					callback(){
 
