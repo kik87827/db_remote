@@ -414,9 +414,15 @@ textarea.form_textarea:focus{border-color:#000;}
 .user_control_box{display:inline-flex; min-height:36px; background:#006F3E; border-radius:6px; gap:5px; align-items: center; padding:10px 14px; box-sizing: border-box;}
 .user_control_box .ico{display:inline-block; width:18px; height:18px; background-repeat: no-repeat; background-position:0 0;background-size:100% auto;}
 .user_control_box .ico.call{background-image:url("../images/ico_call.png");}
+.user_control_box .ico.call_type01{background-image:url("../images/ico_call_type_01.png");}
+.user_control_box .ico.call_type02{background-image:url("../images/ico_call_type_02.png");}
+.user_control_box .ico.call_type03{background-image:url("../images/ico_call_type_03.png");}
 .user_control_box .ico.send{background-image:url("../images/ico_send.png");}
 .user_control_box .ico.setting{background-image:url("../images/ico_setting.png");}
-.user_control_text{font-size:15px; color:#fff; display:inline-block; line-height:1;}
+.user_control_box.skin2{background-color:#BE0202;}
+.user_control_text,
+.user_control_action{font-size:16px; color:#fff; display:inline-block; line-height:1;}
+.user_control_action{margin-left:7px;letter-spacing: -1px;}
 
 .user_util_list{display:flex;gap:13px; align-items: center;}
 .user_util_list > li{}
@@ -491,12 +497,14 @@ textarea.form_textarea:focus{border-color:#000;}
 .btn_thum_control{display:block;width:18px; height:18px;  background-repeat:no-repeat; background-size: 100% auto; background-position: 0 0;}
 .btn_thum_control.prev{background-image:url("../images/ico_thum_prev.png");}
 .btn_thum_control.next{background-image:url("../images/ico_thum_next.png");}
-.indigator_fraction{font-size:14px; color:#AAAAAA; display:flex; justify-content: center;align-items: center;}
+.indigator_fraction{font-size:12px; color:#AAAAAA; display:flex; justify-content: center;align-items: center; position:relative;top:-1px;gap:2px;}
 .indi_current,
-.indi_part{color:#000000;}
+.indi_part{color:#AAAAAA;}
 .indi_current{}
 .indi_part{}
 .indi_length{}
+
+input.indi_input{width:32px;height:19px;font-weight:bold;position:relative;top:1px;line-height:1;border:1px solid #C2C4C6;border-radius:3px;text-align: center; box-sizing: border-box;padding:0 0 3px;}
 
 .viewer_edit_wrap{padding:30px 17px 0;margin-top:20px;border-top:1px solid #EFEFEF; position:relative;
 
