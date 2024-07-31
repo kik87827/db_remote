@@ -50,31 +50,19 @@
 						<li class="active line_active">
 							<div class="process_item">
 								<span class="process_item_bullet">1</span>
-								<span class="process_item_text">고객연결</span>
+								<span class="process_item_text">조직원연결</span>
 							</div>
 						</li>
 						<li class="active line_active">
 							<div class="process_item">
 								<span class="process_item_bullet">2</span>
-								<span class="process_item_text">기본안내</span>
+								<span class="process_item_text">코칭</span>
 							</div>
 						</li>
 						<li class="active">
 							<div class="process_item">
 								<span class="process_item_bullet">3</span>
-								<span class="process_item_text">컨설팅</span>
-							</div>
-						</li>
-						<li class="active">
-							<div class="process_item">
-								<span class="process_item_bullet">4</span>
-								<span class="process_item_text">체크리스트</span>
-							</div>
-						</li>
-						<li class="active">
-							<div class="process_item">
-								<span class="process_item_bullet">5</span>
-								<span class="process_item_text">상담종료</span>
+								<span class="process_item_text">코칭종료</span>
 							</div>
 						</li>
 					</ul>
@@ -98,34 +86,44 @@
 				</div>
 				<div class="main_contents_wrap">
 					<div class="mc_top_row">
-						<a href="javascript:;" class="btn_sbox check skin2 no_gap link"><span class="sbox_text">공통 콘텐츠</span></a>
+						<a href="javascript:;" class="btn_sbox skin2 no_gap link"><span class="sbox_text">코칭결과</span></a>
 					</div>
 					<div class="mc_form_props_row">
 						<ul class="props_item_list">
 							<li>
 								<div class="props_item">
-									<input type="radio" name="form_name" id="form_props_01" class="props_form">
-									<label for="form_props_01" class="props_label">보장분석</label>
+									<input type="radio" name="form_name" id="form_props_01" class="props_form" checked>
+									<label for="form_props_01" class="props_label">동반</label>
 								</div>
 							</li>
 							<li>
 								<div class="props_item">
 									<input type="radio" name="form_name" id="form_props_02" class="props_form">
-									<label for="form_props_02" class="props_label">가입제안</label>
-								</div>
-							</li>
-							<li>
-								<div class="props_item">
-									<input type="radio" name="form_name" id="form_props_03" class="props_form">
-									<label for="form_props_03" class="props_label">체결예정</label>
+									<label for="form_props_02" class="props_label">코칭</label>
 								</div>
 							</li>
 						</ul>
 					</div>
+					<div class="mc_form_field_row">
+						<table class="mc_form_field">
+							<tr>
+								<th><span class="mc_form_key">고객명</span></th>
+								<td><input type="text" class="form_input" style="width:140px"></td>
+								<th><span class="mc_form_key">동반목적</span></th>
+								<td style="width:100%"><select class="form_select" style="width:75%">
+										<option>선택</option>
+									</select></td>
+							</tr>
+						</table>
+					</div>
 					<div class="mc_form_write_row">
 						<div class="mc_form_textarea_wrap">
-							<textarea class="mc_form_textarea" rows="10" cols="10">주의사항 안내</textarea>
+							<textarea class="mc_form_textarea" rows="10" cols="10">코칭내용 작성가이드 안내</textarea>
 						</div>
+					</div>
+					<div class="btn_bottom_section mtype2">
+						<a href="#" class="btn_box link_reverse skin3 size2"><span class="btn_box_text">상담종료</span></a>
+						<a href="#" class="btn_box link skin2 size2"><span class="btn_box_text">코칭저장</span></a>
 					</div>
 				</div>
 			</div>

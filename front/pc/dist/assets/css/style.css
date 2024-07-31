@@ -200,6 +200,7 @@ select.form_select{color:#1A1A1A;cursor:pointer;font-size:14px; border:1px solid
 select.form_select::-ms-value {background: none; color:#333;}
 select.form_select::-ms-expand {display: none;}
 select.form_select.min_wid{min-width:98px;}
+select.form_select:focus{border-color:#000}
 input.form_input{height:34px;  color:#1A1A1A; line-height:1; width:100%; border-radius: 4px; background:#fff; border:1px solid #AAAAAA; box-sizing: border-box; padding:0 10px; font-size:14px;}
 input.form_input:disabled{background:#eee;}
 input.form_input.calendar{background:#fff url("../images/ico_calendar.png") no-repeat calc(100% - 8px) 50%/20px auto;padding-right:35px;}
@@ -348,7 +349,7 @@ textarea.form_textarea:focus{border-color:#000;}
 
 
 .btn_sbox.link{padding-right:5px;}
-.btn_sbox.link:after{display:block;content:'';width:16px; height:16px; background:url("../images/ico_link_allow15x15.png") no-repeat 50% 50%/100% auto; flex:0 0 16px;}
+.btn_sbox.link:after{display:block;content:'';width:16px; height:16px; position:relative;top:0; background:url("../images/ico_link_allow15x15.png") no-repeat 50% 50%/100% auto; flex:0 0 16px;}
 .btn_sbox.link .sbox_text{}
 .btn_sbox.link.skin2:after{background-image:url("../images/ico_link_green_allow16x16.png")}
 .btn_sbox.link.skin3:after{background-image:url("../images/ico_link_skin2_allow16x16.png")}
@@ -546,6 +547,16 @@ input.indi_input{width:32px;height:19px;font-weight:bold;position:relative;top:1
 .form_obj_key_cols{}
 .form_obj_key{font-size:14px; color:#000000; display:inline-flex; align-items: center; min-height:34px;}
 .form_obj_value_cols{}
+
+.mc_form_field_row{margin-top:18px;}
+.mc_form_field{width:100%;}
+.mc_form_field th,
+.mc_form_field td{text-align: left;}
+.mc_form_field th{width:1px; white-space: nowrap;padding-right:20px;}
+.mc_form_field td{}
+.mc_form_field td + th{padding-left:40px;}
+.mc_form_field td input.form_input{}
+.mc_form_key{font-size:14px; color:#535353; font-weight:bold; letter-spacing: -0.5px;}
 
 .mc_form_write_row{margin-top:33px;}
 .mc_form_textarea_wrap{}
