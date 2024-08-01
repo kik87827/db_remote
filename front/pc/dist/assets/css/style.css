@@ -36,6 +36,7 @@ input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px
 .middle_wrap.gap2{margin-top:50px;}
 .middle_wrap.gap3{margin-top:35px;}
 .middle_wrap.gap4{margin-top:21px;}
+.middle_wrap.gap5{margin-top:29px;}
 .middle_wrap.pixed.size2{max-width:800px; margin:50px auto 110px; width:100%;}
 .footer_wrap{text-align: center;padding:120px 30px 50px}
 .footer_copy{font-size:16px; color:#AAAAAA; text-align: center;}
@@ -110,15 +111,18 @@ input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px
 .list_tb thead th:last-of-type{}
 .list_tb tbody td{border-bottom:1px solid #DDDDDD;padding:15px 10px;}
 .list_tb tbody td.type2{padding-top:0;padding-bottom:0;}
+.list_tb tbody td.has_ico{font-size:0;line-height:0;}
 .list_tb tbody td.align2{text-align: left;padding-left:50px;padding-right:50px;}
 .list_tb tbody td:last-of-type{}
 .list_tb tbody tr:hover td{background:#F7FCF6;}
 .list_tb tbody td .props_form{vertical-align: middle;}
 .list_thtext{font-size:16px; letter-spacing: -1px; color:#1A1A1A; font-weight:bold;}
-.list_tdtext{font-size:16px; letter-spacing: -1px; color:#000;}
-.list_current{font-size:16px; letter-spacing: -1px; color:#000;}
+.list_tdtext{font-size:16px; letter-spacing: -0.5px; color:#000;}
+.list_current{font-size:16px; letter-spacing: -0.5px; color:#000;}
 .list_current.type2{background-color:#DFF5A5;padding:8px 18px 9px;border-radius:100px;}
 
+.ico_link_item{display:inline-block;width:20px;height:20px;background-position: 50% 50%; background-size:100% auto; background-repeat:no-repeat;vertical-align: middle;}
+.ico_link_item.call{background-image:url("../images/ico_list_call.png");}
 
 .list_tb_wrap.skin2{}
 .list_tb_wrap.skin2 .list_tb{}
@@ -147,6 +151,7 @@ input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px
 .line_pen_inner{display:inline-block; position:relative; font-weight:bold; color:#000;}
 
 /* paging */
+.paging_zone{position:relative;margin-top:25px;}
 .paging_wrap{display:flex; align-items: center; justify-content: center;}
 .btn_paging_control{display:inline-block;  width:16px; height:16px; flex:0 0 16px; margin:0 4px; background-repeat:no-repeat; background-position:0 0; background-size:100% auto;}
 .btn_paging_control.first{background-image:url("../images/ico_paging_first.png");}
@@ -158,6 +163,9 @@ input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px
 .btn_paging_num_list > li{}
 .btn_paging_num{display:inline-flex; align-items: center; justify-content: center; width:16px; height:16px; font-size:16px; text-align: center;color:#AAAAAA;}
 .btn_paging_num.active{font-weight:bold; color:#000000}
+.paging_fraction{font-size:16px; color:#000000; letter-spacing: -1px;}
+.paging_else_left_wrap{position:absolute;top:50%;left:0;transform: translateY(-50%);}
+.paging_else_right_wrap{position:absolute;top:50%;right:0;transform: translateY(-50%);}
 /* // paging */
 
 
@@ -590,7 +598,23 @@ input.form_input{}
 .list_top_row{margin-bottom:10px; display:flex;}
 .list_top_row.align2{justify-content: flex-end;}
 
-.contents_note_section{margin-top:28px; font-size:13px; color:#767676; line-height:1.4;}
+.list_top_obj_wrap{display:flex; justify-content:space-between; gap:20px; align-items: center; margin-bottom:25px;}
+.list_top_obj_wrap .left_cols{}
+.list_top_obj_wrap .right_cols{}
+
+.bartab_wrap{}
+.bartab_list{display:flex;min-height:40px;border:1px solid #00854A; border-radius:100px; position:relative;overflow:hidden;}
+.bartab_list > li{}
+.bartab_list > li:first-of-type .bartab{padding-left:20px;}
+.bartab_list > li:last-of-type .bartab{padding-right:20px;}
+/* .bartab_list > li:first-of-type .bartab{margin-left:0;}
+.bartab_list > li + li .bartab{padding-left:35px;}  */
+/* .bartab_list > li:first-of-type .bartab{margin:0 0 0 0;}
+.bartab_list > li:last-of-type .bartab{margin:0 0 0 -10px;} */
+.bartab{display:flex; align-items: center;height:100%; position:relative; color:#00854A; background:#fff;padding:10px 10px 10px 10px; box-sizing: border-box; border-radius:100px;}
+.bartab.active{background:#00854A; color:#fff;z-index:1;margin:0;padding:10px 20px;}
+
+.contents_note_section{margin-top:28px; font-size:13px; color:#767676; line-height:1.4; letter-spacing: -0.5px;}
 
 .mc_docu_container{background:#fff;padding:25px;margin:0 -7px;}
 .docu_title_wrap{text-align: center; margin-bottom:28px;}
