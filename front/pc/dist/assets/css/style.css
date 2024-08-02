@@ -201,10 +201,12 @@ input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px
 .data_search_form_cols{flex: 1;}
 .inline_flex_item{display:flex;align-items: center;gap:4px;}
 .inline_flex_cols{}
+.inline_flex_cols .props_item{margin-left:5px;}
 .inline_flex_cols.liquid{flex:1;}
 
 .btn_has_row{display:flex; justify-content: space-between; gap:20px;}
-.btn_has_col{}
+.btn_has_cols{}
+.btn_has_not_cols{min-width:1px;}
 
 select.form_select{color:#1A1A1A;cursor:pointer;font-size:14px; border:1px solid #aaa;height: 34px;padding: 0 30px 0 10px;border-radius:4px;box-sizing:border-box;
     background: #fff url("../images/ico_select.png") no-repeat calc(100% - 14px) 50%/7.5px 6px;line-height:32px;-webkit-appearance:none;-moz-appearance:none;appearance:none;
@@ -294,6 +296,7 @@ input[type="radio"].props_form{border-radius:100%;background-color:#fff;width:20
 input[type="radio"].props_form:checked{border:5px solid #00854A;}
 input[type="radio"].props_form:checked + .props_label{}
 .props_item{display:inline-flex;gap:8px; }
+.props_item.gap2{gap:4px;}
 .props_label{font-size:14px; color:#000000; display:inline-block; cursor: pointer;}
 .props_obj_group{display:flex; gap:10px; align-items: center;}
 .props_obj_keyword{font-size:14px; color:#000000;line-height:1; font-size:14px; }
@@ -346,6 +349,8 @@ textarea.form_textarea:focus{border-color:#000;}
 
 
 .btn_sbox{display:inline-flex; gap:4px; min-height:34px; box-sizing: border-box; border-radius:4px; align-items: center; border:1px solid #767676; padding:5px 10px;}
+.btn_sbox.small{min-height:25px;gap:3px;}
+.btn_sbox.small .sbox_text{font-size:12px; letter-spacing: -0.5px;}
 .btn_sbox:before{}
 .sbox_text{display:inline-block; font-size:14px;}
 
@@ -359,6 +364,8 @@ textarea.form_textarea:focus{border-color:#000;}
 .btn_sbox.skin3:before{}
 .btn_sbox.skin3 .sbox_text{color:#1A1A1A; font-weight:bold;}
 
+.btn_sbox .ico{display:block;width:16px; height:14.5px; position:relative;top:0;flex:0 0 16px; background-position:0 0;background-size:100% auto; background-position:0 0;}
+.btn_sbox .ico.excel{background-image:url("../images/ico_excel.png");}
 
 .btn_sbox.link{padding-right:5px;}
 .btn_sbox.link:after{display:block;content:'';width:16px; height:16px; position:relative;top:0; background:url("../images/ico_link_allow15x15.png") no-repeat 50% 50%/100% auto; flex:0 0 16px;}
