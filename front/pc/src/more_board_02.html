@@ -55,12 +55,77 @@
 					<ul class="mid_tab_list">
 						<li><a href="javascript:;" class="mid_tab"><span class="mid_tab_text">공통컨텐츠 관리</span></a></li>
 						<li><a href="javascript:;" class="mid_tab active"><span class="mid_tab_text">접속URL 전송이력</span></a></li>
-						<li><a href="javascript:;" class="mid_tab"><span class="mid_tab_text">로그기록/설명정보</span></a></li>
+						<li><a href="javascript:;" class="mid_tab"><span class="mid_tab_text">로그기록/상품설명 정보</span></a></li>
 					</ul>
 				</div>
 				<div class="list_tb_zone">
-					<div class="list_top_row align2">
+					<!-- <div class="list_top_row align2">
 						<select class="form_select" style="width:115px;"><option>조회기간</option></select>
+					</div> -->
+					<div class="data_search_box">
+						<form>
+							<table class="data_search_field">
+								<tr>
+									<th><span class="data_search_label">발송일</span></th>
+									<td>
+										<div class="inline_flex_item">
+											<div class="inline_flex_cols">
+												<input type="text" class="form_input calendar" style="width:150px" value="2024-06-07">
+											</div>
+											<div class="inline_flex_cols">
+												<span class="inline_flex_else">~</span>
+											</div>
+											<div class="inline_flex_cols">
+												<input type="text" class="form_input calendar" style="width:150px" value="2024-06-07">
+											</div>
+										</div>
+										<!-- <div class="inline_flex_item">
+											<div class="inline_flex_cols"><select class="form_select min_wid"><option>전체</option></select></div>
+											<div class="inline_flex_cols liquid">
+												<div class="inline_flex_item">
+													<div class="inline_flex_cols liquid">
+														<input type="text" class="form_input calendar" value="2024-06-07">
+													</div>
+													<div class="inline_flex_cols">
+														<span class="inline_flex_else">~</span>
+													</div>
+													<div class="inline_flex_cols liquid">
+														<input type="text" class="form_input calendar" value="2024-06-07">
+													</div>
+												</div>
+											</div>
+										</div> -->
+									</td>
+									<th><span class="data_search_label">전송결과</span></th>
+									<td><select class="form_select" style="width:110px"><option>전체</option></select></td>
+								</tr>
+								<tr>
+									<th><span class="data_search_label">조회구분</span></th>
+									<td colspan="3">
+										<select class="form_select" style="width:150px"><option>전체</option></select>
+									</td>
+									<!-- <th>
+										<select class="form_select"><option>취급자</option></select>
+									</th>
+									<td>
+										<div class="inline_flex_item">
+											<div class="inline_flex_cols">
+												<div class="search_sm_container">
+													<input type="text" class="input_search_sm" value="23015245">
+													<button class="btn_search_sm"><span class="hdtext">검색</span></button>
+												</div>
+											</div>
+											<div class="inline_flex_cols liquid">
+												<input type="text" class="form_input" value="한새봄/한새봄/청주TC">
+											</div>
+											<div class="inline_flex_cols">
+												<button class="btn_control_box">조회</button>
+											</div>
+										</div>
+									</td> -->
+								</tr>
+							</table>
+						</form>
 					</div>
 					<div class="list_tb_wrap">
 						<table class="list_tb">
@@ -68,12 +133,12 @@
 								<col style="width:70px">
 								<col style="width:10%">
 								<col style="width:10%">
-								<col style="width:10%">
-								<col style="width:10%">
-								<col style="width:10%">
-								<col style="width:10%">
-								<col style="width:10%">
-								<col style="width:10%">
+								<col style="width:11%">
+								<col style="width:11%">
+								<col style="width:11%">
+								<col style="width:11%">
+								<col style="width:11%">
+								<col style="width:11%">
 								<col>
 							</colgroup>
 							<thead>
@@ -130,17 +195,41 @@
 							</tbody>
 						</table>
 					</div>
-					<div class="contents_note_section">
-						<ul class="indent_para_list">
-							<li>
-								<span class="indent_bullet">*</span>
-								<div class="indent_textcontent">
-									사유 : 1착신가입자 없음 2. 단말기전원꺼짐/음영지원 3. 통신사 시스템 에러 4. 기타 5.번호도용문자 차단 입자
-								</div>
-							</li>
-						</ul>
+					<div class="paging_zone">
+						<div class="paging_else_left_wrap">
+							<p class="paging_fraction">조회결과 : 항목수 / 페이지수</p>
+						</div>
+						<!-- paging -->
+						<div class="paging_wrap">
+							<a href="javascript:;" class="btn_paging_control first disabled"><span class="hdtext">처음</span></a>
+							<a href="javascript:;" class="btn_paging_control prev disabled"><span class="hdtext">이전</span></a>
+							<ul class="btn_paging_num_list">
+								<li><a href="#" class="btn_paging_num active">1</a></li>
+								<li><a href="#" class="btn_paging_num">2</a></li>
+								<li><a href="#" class="btn_paging_num">3</a></li>
+								<li><a href="#" class="btn_paging_num">4</a></li>
+								<li><a href="#" class="btn_paging_num">5</a></li>
+							</ul>
+							<a href="javascript:;" class="btn_paging_control next"><span class="hdtext">다음</span></a>
+							<a href="javascript:;" class="btn_paging_control last"><span class="hdtext">끝</span></a>
+						</div>
+						<!-- // paging -->
 					</div>
 				</div>
+				<script>
+					$(function() {
+						$(".form_input.calendar").datepicker({
+							monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+							dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+							changeMonth: true,
+							changeYear: true,
+							dateFormat: 'yy-mm-dd',
+							beforeShow(input, inst) {
+		
+							}
+						});
+					});
+				</script>
 			</main>
 		</div>
 	</body>

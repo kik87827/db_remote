@@ -130,6 +130,7 @@ input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px
 
 .mid_tab_wrap + .list_tb_zone{margin-top:17px;}
 .list_tb_zone{}
+.list_tb_zone > .data_search_box{margin:0 0 30px 0;}
 .list_tb_fraction{font-size:14px; padding:0 10px 8px; color:#000000; letter-spacing: -0.25px;;}
 .list_tb td.nodata_td{}
 .nodata_copy_wrap{display:flex; gap:5px; justify-content: center; align-items: center;}
@@ -185,9 +186,9 @@ input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px
 .data_search_field{width:100%; table-layout: fixed;}
 .data_search_field tr{}
 .data_search_field tr:last-of-type{}
-.data_search_field th{width:110px;text-align: left;}
+.data_search_field th{width:110px;}
 .data_search_field th,
-.data_search_field td{padding-bottom:16px;}
+.data_search_field td{padding-bottom:16px;text-align: left;}
 .data_search_field tr:last-of-type th,
 .data_search_field tr:last-of-type td{padding-bottom:0;}
 .data_search_field td{padding-right:50px;}
@@ -201,6 +202,9 @@ input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px
 .inline_flex_item{display:flex;align-items: center;gap:4px;}
 .inline_flex_cols{}
 .inline_flex_cols.liquid{flex:1;}
+
+.btn_has_row{display:flex; justify-content: space-between; gap:20px;}
+.btn_has_col{}
 
 select.form_select{color:#1A1A1A;cursor:pointer;font-size:14px; border:1px solid #aaa;height: 34px;padding: 0 30px 0 10px;border-radius:4px;box-sizing:border-box;
     background: #fff url("../images/ico_select.png") no-repeat calc(100% - 14px) 50%/7.5px 6px;line-height:32px;-webkit-appearance:none;-moz-appearance:none;appearance:none;
