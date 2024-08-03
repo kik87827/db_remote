@@ -20,7 +20,7 @@ html:not(.touchmode) ::-webkit-scrollbar {
 .main_body{background:#F7FCF6;}
 /* .bg_page{background:#F7FCF6; position:fixed;top:6px;left:0;width:100%;height:calc(100% - 6px);} */
 .page_wrap{position:relative;z-index:5; display:flex; min-width:1000px; flex-direction: column;min-height:100vh;max-width:1920px;margin:0 auto;}
-.header_wrap{position:relative;padding:36px 0 0 0; flex:0;}
+.header_wrap{position:relative;padding:36px 0 0 0; flex:0; z-index:20;}
 .header_wrap:before{display:block;content:'';width:100%;height: 6px;background: linear-gradient(90deg, #A6CE39 0%, #2EB45D 100%); position:fixed;top:0;left:0;}
 .hgroup_inner{display:flex; justify-content: space-between; gap:20px; align-items: center; padding:0 100px;}
 .toplogo{display:inline-block;}
@@ -259,6 +259,24 @@ input.input_search_sm{flex:1;line-height:1;box-sizing: border-box; padding:0 10p
 .section_top_title{font-size:20px; letter-spacing: -1.5px; color:#000; font-weight:bold;}
 .section_top_tsub{font-size:14px; letter-spacing: -1.3px; color:#00854A; font-weight:bold;margin-left:3px;}
 .section_contents_row{}
+
+.card_form_container{display:flex; gap:34px;}
+.card_form_liquid{flex:1; min-width:0;}
+.card_form_list{display:flex; gap:10px; min-height:80px;}
+.card_form_list > li{flex:1; position:relative;}
+.card_form_obj input.props_form{position:absolute;top:19px;left:17px;z-index:0;}
+input.props_form:checked + .card_props_label{background:#F7FCF6; border-color:#00854A;}
+.card_props_label{display:block;padding:17px 17px 17px 45px;border:1px solid #000; border-radius:8px; min-height:100%; box-sizing: border-box; cursor: pointer;}
+.props_label_main,
+.props_label_sub{font-size:16px; color:#000; letter-spacing: -1px;}
+.props_label_main{font-weight:bold;}
+.props_label_sub{ margin-top:3px;}
+.card_form_short{}
+.btn_card_form_submit{min-height:80px; white-space: nowrap; background:#4D5057; box-sizing: border-box; padding:15px; display:flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 8px;}
+.btn_card_form_submit .submit_text{font-size:14px;color:#fff;}
+.current_data_row{text-align: right;padding-top:15px;}
+.current_data_obj{display:inline-block;position:relative;background:#fcfdc6;border-radius:8px;padding:10px 15px; font-size:14px; color:#000000; letter-spacing: -0.5px;}
+.current_data_obj:after{display:block;content:'';width:12px;height:8px;background:url("../images/word_pointer.png") no-repeat 0 0/100% auto;position:absolute;top:-8px;right:43px;}
 
 .btn_bottom_section{margin-top:40px; text-align: center; display:flex; justify-content: center; align-items: center; gap:8px;}
 .btn_bottom_section.mtype2{margin-top:32px;}
