@@ -155,6 +155,39 @@
 			window.addEventListener("load",()=>{
 				remoteDocuList({scrollView : 3});
 			});
+
+			
+			document.addEventListener("DOMContentLoaded", function() {
+				zoomFunc(); // zoom in out
+			});
+			
+			// zoom in
+			function zoomFunc(){
+				const plus_btn = document.querySelector(".btn_zoom_control.plus");
+				const minus_btn = document.querySelector(".btn_zoom_control.minus");
+				const zoom_control_current = document.querySelector(".zoom_control_current");
+				const user_main_wrap = document.querySelector(".user_main_wrap");
+				let currentIndex = 0;
+				let currentFraction = 100;
+				let currentWidth = 1000;
+
+				plus_btn.addEventListener("click",(e)=>{
+					e.preventDefault();
+					currentIndex++;
+					zoom_control_current.textContent = `${currentFraction = 100 + currentIndex*10}%`;
+					user_main_wrap.style.width = `${currentWidth = 1000 + currentIndex*100}px`;
+					console.log(currentFraction);
+				});
+
+				minus_btn.addEventListener("click",(e)=>{
+					e.preventDefault();
+					if(currentIndex<=0){return;}
+					currentIndex--;
+
+					zoom_control_current.textContent = `${currentFraction = currentFraction - 10}%`;
+					user_main_wrap.style.width = `${currentWidth = currentWidth - 100}px`;
+				});
+			}
 		</script>
 	</body>
 </html>
