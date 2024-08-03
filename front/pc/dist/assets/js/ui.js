@@ -139,3 +139,39 @@ class DesignPopup {
   }
 }
 
+
+
+
+function tableDrag(target){
+  const tableContainer = document.querySelector(target);
+  //const tableContainer = document.querySelector('.list_tb_wrap.scroll_type');
+
+  let isDragging = false;
+  let startX;
+  let scrollLeft;
+
+  tableContainer.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    tableContainer.classList.add('active');
+    startX = e.pageX - tableContainer.offsetLeft;
+    scrollLeft = tableContainer.scrollLeft;
+  });
+
+  tableContainer.addEventListener('mouseleave', () => {
+    isDragging = false;
+    tableContainer.classList.remove('active');
+  });
+
+  tableContainer.addEventListener('mouseup', () => {
+    isDragging = false;
+    tableContainer.classList.remove('active');
+  });
+
+  tableContainer.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - tableContainer.offsetLeft;
+    const walk = (x - startX) * 3; // 스크롤 속도를 조정하려면 숫자를 변경
+    tableContainer.scrollLeft = scrollLeft - walk;
+  });
+}
