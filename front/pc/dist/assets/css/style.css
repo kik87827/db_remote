@@ -108,6 +108,7 @@ input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px
 .d_tr_click.list_tb_wrap tr.active td{background:rgba(0, 133, 74, 0.2);}
 .list_tb{width:100%;}
 .list_tb thead th{border-bottom:1px solid #BBBBBB; padding:12px 10px; background:#F7F9F9;}
+.list_tb .right_line{border-right:1px solid #BBBBBB;}
 .list_tb thead th:last-of-type{}
 .list_tb tbody td{border-bottom:1px solid #DDDDDD;padding:15px 10px;}
 .list_tb tbody td.type2{padding-top:0;padding-bottom:0;}
@@ -127,6 +128,7 @@ input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px
 .ico_link_item.pencil{background-image:url("../images/ico_pencil.png");}
 .ico_link_item.checklist{background-image:url("../images/ico_cheklist.png");}
 .ico_link_item.checkdocu{background-image:url("../images/ico_datadocu.png");}
+.ico_link_item.checkdocu2{background-image:url("../images/ico_checkdocu.png");}
 
 .list_tb_wrap.skin2{}
 .list_tb_wrap.skin2 .list_tb{}

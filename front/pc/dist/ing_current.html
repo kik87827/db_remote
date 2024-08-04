@@ -68,8 +68,202 @@
 			</nav>
 		</header>
 		<main class="middle_wrap pixed gap4">
-			<div class="middle_contents_wrap">
-				내용이 들어갑니다.
+			<div class="data_search_container type2">
+				<div class="data_search_box">
+					<form>
+						<table class="data_search_field">
+							<colgroup>
+								<col style="width:110px">
+								<col style="width:45%">
+								<col style="width:110px">
+								<col>
+							</colgroup>
+							<tr>
+								<th><span class="data_search_label">계약일자</span></th>
+								<td>
+									<div class="inline_flex_item">
+										<div class="inline_flex_cols">
+											<input type="text" class="form_input calendar" style="width:122px" value="2024-06-07">
+										</div>
+										<div class="inline_flex_cols">
+											<span class="inline_flex_else">~</span>
+										</div>
+										<div class="inline_flex_cols">
+											<input type="text" class="form_input calendar" style="width:122px" value="2024-06-07">
+										</div>
+										<div class="inline_flex_cols">
+											<div class="props_item gap2">
+												<input type="checkbox" class="props_form" id="day_01">
+												<label for="day_01" class="props_label">계약일무관</label>
+											</div>
+										</div>
+									</div>
+								</td>
+								<th><span class="data_search_label">구분</span></th>
+								<td>
+									<div class="inline_flex_item">
+										<div class="inline_flex_cols">
+											<select class="form_select" style="width:160px">
+												<option>전체</option>
+												<option>고객명</option>
+												<option>증권번호</option>
+												<option>상담코드</option>
+											</select>
+										</div>
+										<div class="inline_flex_cols">
+											<input type="text" class="form_input" style="width:177px" placeholder="입력">
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th><span class="data_search_label">계약상태</span></th>
+								<td>
+									<select class="form_select" style="width:160px">
+										<option>전체</option>
+										<option>정상</option>
+										<option>미유지</option>
+									</select>
+								</td>
+								<th><span class="data_search_label">심사상태</span></th>
+								<td>
+									<select class="form_select" style="width:160px">
+										<option>전체</option>
+										<option>배정대기</option>
+										<option>심사대기</option>
+										<option>보완요청</option>
+										<option>심사완료</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th><span class="data_search_label">세부상태</span></th>
+								<td colspan="3">
+									<div class="btn_has_row">
+										<div class="btn_has_not_cols">
+											<select class="form_select" style="width:160px">
+												<option>전체</option>
+												<option>자동신청</option>
+												<option>배정완료</option>
+												<option>보완완료</option>
+												<option>조건확인</option>
+												<option>승인</option>
+												<option>미심사대상</option>
+												<option>보완승인</option>
+											</select>
+										</div>
+										<div class="btn_has_col">
+											<button class="btn_control_box">조회</button>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+			<div class="list_tb_wrap scroll_type" id="list_table">
+				<table class="list_tb">
+					<thead>
+						<tr>
+							<th><span class="list_thtext">No.</span></th>
+							<th><span class="list_thtext">증권번호</span></th>
+							<th><span class="list_thtext">증권군명</span></th>
+							<th><span class="list_thtext">상품명</span></th>
+							<th><span class="list_thtext">플랜명</span></th>
+							<th><span class="list_thtext">계약자명</span></th>
+							<th><span class="list_thtext">생년월일</span></th>
+							<th><span class="list_thtext">피보험자명</span></th>
+							<th><span class="list_thtext">생년월일</span></th>
+							<th><span class="list_thtext">합계 보험료</span></th>
+							<th><span class="list_thtext">계약일자</span></th>
+							<th><span class="list_thtext">만기일자</span></th>
+							<th><span class="list_thtext">서명방법</span></th>
+							<th class="right_line"><span class="list_thtext">계약상태</span></th>
+							<th><span class="list_thtext">심사상태</span></th>
+							<th><span class="list_thtext">세부상태</span></th>
+							<th><span class="list_thtext">심사신청/확인</span></th>
+							<th class="right_line"><span class="list_thtext">보완상담</span></th>
+							<th><span class="list_thtext">상담코드</span></th>
+							<th><span class="list_thtext">고객명</span></th>
+							<th><span class="list_thtext">생년월일</span></th>
+							<th><span class="list_thtext">설계번호</span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><span class="list_tdtext">1</span></td>
+							<td><span class="list_tdtext">000000</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td class="right_line"><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">배정대기</span></td>
+							<td><span class="list_tdtext">자동신청</span></td>
+							<td class="has_ico"><a href="javascript:;" class="ico_link_item checkdocu2"><span class="hdtext">확인</span></a></td>
+							<td class="right_line has_ico"><a href="javascript:;" class="ico_link_item call"><span class="hdtext">전화하기</span></a></td>
+							<td><span class="list_tdtext">000000</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+						</tr>
+						<tr>
+							<td><span class="list_tdtext">2</span></td>
+							<td><span class="list_tdtext">000000</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td class="right_line"><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">배정대기</span></td>
+							<td><span class="list_tdtext">자동신청</span></td>
+							<td class="has_ico"><a href="javascript:;" class="ico_link_item checkdocu2"><span class="hdtext">확인</span></a></td>
+							<td class="right_line has_ico"><a href="javascript:;" class="ico_link_item call"><span class="hdtext">전화하기</span></a></td>
+							<td><span class="list_tdtext">000000</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+							<td><span class="list_tdtext">데이터</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="paging_zone">
+				<div class="paging_else_left_wrap">
+					<p class="paging_fraction">조회결과 : 항목수 / 페이지수</p>
+				</div>
+				<!-- paging -->
+				<div class="paging_wrap">
+					<a href="javascript:;" class="btn_paging_control first disabled"><span class="hdtext">처음</span></a>
+					<a href="javascript:;" class="btn_paging_control prev disabled"><span class="hdtext">이전</span></a>
+					<ul class="btn_paging_num_list">
+						<li><a href="#" class="btn_paging_num active">1</a></li>
+						<li><a href="#" class="btn_paging_num">2</a></li>
+						<li><a href="#" class="btn_paging_num">3</a></li>
+						<li><a href="#" class="btn_paging_num">4</a></li>
+						<li><a href="#" class="btn_paging_num">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn_paging_control next"><span class="hdtext">다음</span></a>
+					<a href="javascript:;" class="btn_paging_control last"><span class="hdtext">끝</span></a>
+				</div>
+				<!-- // paging -->
+				<!--  -->
+				<div class="paging_else_right_wrap"></div>
+				<!-- // -->
 			</div>
 			<!-- middle local popup -->
 			<div class="middle_local_popup_wrap" id="check_popup">
@@ -88,7 +282,36 @@
 						</div>
 					</div>
 					<div class="middle_local_contents">
-						내용이 들어갑니다.
+						<div class="data_search_container type2">
+							<div class="data_search_box">
+								<form>
+									<table class="data_search_field">
+										<colgroup>
+											<col style="width:110px">
+											<col style="width:45%">
+											<col style="width:110px">
+											<col>
+										</colgroup>
+										<tr>
+											<th><span class="data_search_label">계약일자</span></th>
+											<td></td>
+											<th><span class="data_search_label">구분</span></th>
+											<td></td>
+										</tr>
+										<tr>
+											<th><span class="data_search_label">계약상태</span></th>
+											<td></td>
+											<th><span class="data_search_label">심사상태</span></th>
+											<td></td>
+										</tr>
+										<tr>
+											<th><span class="data_search_label">세부상태</span></th>
+											<td colspan="3"></td>
+										</tr>
+									</table>
+								</form>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -96,6 +319,18 @@
 		</main>
 	</div>
 	<script>
+		$(function() {
+			$(".form_input.calendar").datepicker({
+				monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+				dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+				changeMonth: true,
+				changeYear: true,
+				dateFormat: 'yy-mm-dd',
+				beforeShow(input, inst) {
+
+				}
+			});
+		});
 		document.addEventListener("DOMContentLoaded", function() {
 			// 퍼블확인용
 			let url = window.location.href.split('?')[1];
@@ -104,6 +339,9 @@
 				document.querySelector(".middle_contents_wrap").style.display = "none";
 				document.querySelector("#check_popup").classList.add("active");
 			}
+
+			// 테이블 드래그
+			tableDrag("#list_table");
 
 			// local popup event
 			document.querySelector(".btn_midlocal_close").addEventListener("click", (e) => {
