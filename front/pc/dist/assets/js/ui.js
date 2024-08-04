@@ -175,3 +175,46 @@ function tableDrag(target){
     tableContainer.scrollLeft = scrollLeft - walk;
   });
 }
+
+
+function getScrollbarWidth() {
+  // Create a temporary div container and append it into the body
+  const container = document.createElement('div');
+  // Append the div container into the body
+  document.body.appendChild(container);
+
+  // Force scrollbar to appear
+  container.style.overflow = 'scroll';
+  container.style.width = '50px';
+  container.style.height = '50px';
+
+  // Add inner div
+  const inner = document.createElement('div');
+  container.appendChild(inner);
+  inner.style.width = '100%';
+  inner.style.height = '100%';
+
+  // Calculate the width based on the difference between the container width and the inner width
+  const scrollbarWidth = container.offsetWidth - inner.offsetWidth;
+
+  // Remove the temporary div container
+  document.body.removeChild(container);
+
+  return scrollbarWidth;
+}
+
+
+function scrollTableAction(target){
+  const targetTbWrap = document.querySelector(target);
+  const targetThead = targetTbWrap.querySelector(".list_thead_wrap");
+  const targetTbody = targetTbWrap.querySelector(".list_tbody_wrap");
+  const targetTbodyTb = targetTbody.querySelector(".list_tb");
+  /* if(!!targetTbWrap){
+    targetTbWrap
+  } */
+  if(targetTbody.getBoundingClientRect().height>=targetTbodyTb.getBoundingClientRect().height){
+    targetThead.classList.remove("has_scroll");
+  }else{
+    targetThead.classList.add("has_scroll");
+  }
+}
